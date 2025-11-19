@@ -1,4 +1,5 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent } from "react";
+import { rechercheSchema } from "../schema/search";
 
 export interface SearchBoxProps {
   initialQuery?: string;
@@ -8,23 +9,37 @@ export interface SearchBoxProps {
 }
 
 export default function SearchBox({
-  initialQuery = '',
-  placeholder = 'Search…',
+  initialQuery = "",
+  placeholder = "Search…",
   onChange,
   onSubmit,
 }: SearchBoxProps) {
   const [q, setQ] = useState<string>(initialQuery);
+  const [erreur, setErreur] = useState<string>("");
 
   function handleChange(value: string) {
     setQ(value);
+    setErreur("");
     onChange?.(value);
   }
 
   function handleSubmit(e?: FormEvent) {
     e?.preventDefault?.();
-    const trimmed = q.trim();
-    if (!trimmed) return;
-    onSubmit?.(trimmed);
+    const brut = q;
+
+    const parsed = rechercheSchema.safeParse(brut);
+
+    if (!parsed.success) {
+      const msg =
+        parsed.error.issues[0]?.message ||
+        "La requête de recherche est invalide.";
+      setErreur(msg);
+      return;
+    }
+
+    const valeurValide = parsed.data;
+    setErreur("");
+    onSubmit?.(valeurValide);
   }
 
   return (
@@ -36,12 +51,17 @@ export default function SearchBox({
         aria-label="search input"
         onChange={(e) => handleChange(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter') handleSubmit();
+          if (e.key === "Enter") handleSubmit();
         }}
       />
       <button type="submit" disabled={!q.trim()}>
         Search
       </button>
+      {erreur && (
+        <p role="alert" aria-label="search-error">
+          {erreur}
+        </p>
+      )}
     </form>
   );
 }

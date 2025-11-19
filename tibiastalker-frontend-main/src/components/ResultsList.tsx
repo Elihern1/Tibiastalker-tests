@@ -1,60 +1,88 @@
-import React, { useEffect, useState } from 'react';
-import ResultCard from './ResultCard';
+import React, { useEffect, useState } from "react";
+import ResultCard from "./ResultCard";
+import { listePersonnagesSchema, Personnage } from "../schema/character";
 
-export interface Character {
-  id: string;
-  name: string;
-  level: number;
-  vocation?: string;
-  server?: string;
-}
+export type Character = Personnage & { id: string };
 
 export interface ResultsListProps {
   query: string;
-  endpoint: string; // ex: "/api/search?name="
+  endpoint: string;
 }
 
 export default function ResultsList({ query, endpoint }: ResultsListProps) {
   const [items, setItems] = useState<Character[]>([]);
-  const [state, setState] = useState<'idle'|'loading'|'success'|'error'>('idle');
-  const [error, setError] = useState<string>('');
+  const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
+    "idle"
+  );
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     if (!query.trim()) {
       setItems([]);
-      setState('idle');
-      setError('');
+      setState("idle");
+      setError("");
       return;
     }
+
     let cancelled = false;
+
     async function run() {
       try {
-        setState('loading');
-        setError('');
-        const res = await fetch(`${endpoint}${encodeURIComponent(query.trim())}`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = (await res.json()) as Character[];
+        setState("loading");
+        setError("");
+
+        const res = await fetch(
+          `${endpoint}${encodeURIComponent(query.trim())}`
+        );
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        const parseResult = listePersonnagesSchema.safeParse(data);
+
+        if (!parseResult.success) {
+          if (process.env.NODE_ENV !== "production") {
+            console.error("Erreur Zod:", parseResult.error.format());
+          }
+          if (!cancelled) {
+            setItems([]);
+            setState("error");
+            setError("Les données reçues du serveur sont invalides.");
+          }
+          return;
+        }
+
+        const personnages = parseResult.data.map((p, index) => ({
+          id: `${p.name}-${p.level}-${index}`,
+          ...p,
+        }));
+
         if (!cancelled) {
-          setItems(data);
-          setState('success');
+          setItems(personnages);
+          setState("success");
         }
       } catch (e: any) {
         if (!cancelled) {
           setItems([]);
-          setState('error');
-          setError(e?.message ?? 'Unknown error');
+          setState("error");
+          setError(e?.message ?? "Une erreur est survenue.");
         }
       }
     }
+
     run();
+
     return () => {
       cancelled = true;
     };
   }, [query, endpoint]);
 
-  if (state === 'idle') return <p aria-label="idle">Enter a query…</p>;
-  if (state === 'loading') return <p role="status">Loading…</p>;
-  if (state === 'error') return <p role="alert">Error: {error}</p>;
+  if (state === "idle") return <p aria-label="idle">Enter a query…</p>;
+  if (state === "loading") return <p role="status">Loading…</p>;
+  if (state === "error") return <p role="alert">Error: {error}</p>;
   if (items.length === 0) return <p aria-label="no-results">No results</p>;
 
   return (
@@ -72,3 +100,4 @@ export default function ResultsList({ query, endpoint }: ResultsListProps) {
     </section>
   );
 }
+

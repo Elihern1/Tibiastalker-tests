@@ -7,19 +7,31 @@ export default defineConfig({
     setupFiles: ['./test/setup.ts'],
     include: ['**/*.{test,spec}.{ts,tsx,js,jsx}'],
     css: true,
+    environmentOptions: { jsdom: { url: 'http://localhost' } },
     coverage: {
+      provider: 'v8',
       reporter: ['text', 'html'],
+      reportsDirectory: './coverage',
+      include: [
+        'src/utils/strings.ts',
+        'src/utils/url.ts',
+        'src/utils/levels.ts',
+        'src/components/ResultCard.tsx',
+        'src/components/ResultsList.tsx',
+        'src/components/SearchBox.tsx',
+      ],
+      //ignore les fichiers de tests/config
       exclude: [
         '**/node_modules/**',
         '**/.next/**',
         '**/dist/**',
         '**/build/**',
         '**/coverage/**',
-        '**/next.config.*',
-        '**/vite.config.*',
+        '**/__tests__/**',
+        '**/*.test.*',
         '**/vitest.config.*',
-        '**/test/**' // on n’inclut pas les fichiers de setup dans la couverture
-      ]
-    }
-  }
+        '**/next.config.*',
+      ],
+    },
+  },
 });
