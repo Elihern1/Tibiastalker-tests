@@ -1,0 +1,39 @@
+name: CI TP2
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - tp2
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installer les dépendances
+        working-directory: ./tibiastalker-frontend-main
+        run: npm install --legacy-peer-deps
+
+      - name: Tests unitaires Vitest
+        working-directory: ./tibiastalker-frontend-main
+        run: npm test
+
+      - name: Couverture de code
+        working-directory: ./tibiastalker-frontend-main
+        run: npm run test:coverage
+
+      - name: Tests Cypress (Component Testing)
+        working-directory: ./tibiastalker-frontend-main
+        run: npm run ct:run
