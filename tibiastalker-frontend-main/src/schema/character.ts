@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const personnageSchema = z
   .object({
+    id: z.string().optional(),
     name: z.string(),
     level: z.number().int().nonnegative(),
     vocation: z.string().optional(),
