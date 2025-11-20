@@ -6,5 +6,9 @@ export default defineConfig({
       framework: "next",
       bundler: "webpack",
     },
+    indexHtmlFile: "cypress/support/component-index.html",
+  },
+  env: {
+    NEXT_TELEMETRY_DISABLED: 1,
   },
 });
