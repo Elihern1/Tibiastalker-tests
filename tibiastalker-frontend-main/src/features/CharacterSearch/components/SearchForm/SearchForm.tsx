@@ -1,82 +1,75 @@
 import { useEffect, useRef, useState } from "react";
 import { Button, Col, Dropdown, Form, Row, Spinner } from "react-bootstrap";
-
 import usePromptList from "../../hooks/usePromptList";
 import { SearchFormProps } from "./types";
 
 export const SearchForm = ({ onSubmit, isLoading, value }: SearchFormProps) => {
   const { promptList, getPromptList, clearPromptList } = usePromptList();
 
-  // 🔥 Protection : TOUJOURS un tableau
-  const safePromptList: string[] = Array.isArray(promptList) ? promptList : [];
-
   const [inputValue, setInputValue] = useState(value);
   const [isFocusOnInput, setIsFocusOnInput] = useState(false);
+
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // proteger contre promptList = undefined
+  const safePromptList = Array.isArray(promptList) ? promptList : [];
 
   const updateInputValue = (newValue: string) => {
     setInputValue(newValue);
     getPromptList(newValue);
   };
 
-  const submit = (value?: string) => {
-    if (!value) {
-      onSubmit(inputValue);
-    } else {
-      setInputValue(value);
-      onSubmit(value);
-    }
+  const submit = (valueOverride?: string) => {
+    const finalValue = valueOverride ?? inputValue;
+
+    onSubmit(finalValue);
+    setInputValue(finalValue);
+
     setIsFocusOnInput(false);
     clearPromptList();
   };
 
   const delayedInputBlur = () => {
-    timeoutRef.current = setTimeout(() => setIsFocusOnInput(false), 200);
+    timeoutRef.current = setTimeout(() => {
+      setIsFocusOnInput(false);
+    }, 200);
   };
 
-  const abortInputBlurWhenFocusOnPrompt = () => {
+  const abortInputBlur = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
   };
 
   useEffect(() => {
     if (value !== inputValue) setInputValue(value);
-  }, [value, inputValue]);
+  }, [value]);
 
   return (
     <Row>
       <Col className="p-1">
         <Form.Control
           type="text"
-          autoFocus
           placeholder="Character Name"
-          data-testid="search-input"
-          onChange={(event) => updateInputValue(event.target.value)}
           value={inputValue}
+          data-testid="search-input"
+          autoFocus
+          onChange={(e) => updateInputValue(e.target.value)}
           onFocus={() => setIsFocusOnInput(true)}
           onBlur={delayedInputBlur}
-          onKeyDown={(event) => {
-            if (event.key === "Enter") submit();
+          onKeyDown={(e) => {
+            if (e.key === "Enter") submit();
           }}
         />
 
-        {/* 🔥 Version sécurisée */}
-        {safePromptList.length > 0 && (
-          <Dropdown.Menu
-            show={isFocusOnInput}
-            onFocus={abortInputBlurWhenFocusOnPrompt}
-          >
-            {safePromptList.map((item: string) => (
-              <Dropdown.Item
-                key={item}
-                onClick={() => {
-                  submit(item);
-                }}
-              >
-                {item}
-              </Dropdown.Item>
-            ))}
-          </Dropdown.Menu>
-        )}
+        <Dropdown.Menu
+          show={isFocusOnInput && safePromptList.length > 0}
+          onFocus={abortInputBlur}
+        >
+          {safePromptList.map((item) => (
+            <Dropdown.Item key={item} onClick={() => submit(item)}>
+              {item}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
       </Col>
 
       <Col xs="auto" className="p-1">
@@ -85,8 +78,8 @@ export const SearchForm = ({ onSubmit, isLoading, value }: SearchFormProps) => {
         ) : (
           <Button
             variant="outline-info"
-            onClick={() => submit()}
             data-testid="search-button"
+            onClick={() => submit()}
           >
             Search
           </Button>
@@ -95,5 +88,3 @@ export const SearchForm = ({ onSubmit, isLoading, value }: SearchFormProps) => {
     </Row>
   );
 };
-
-export default SearchForm;
