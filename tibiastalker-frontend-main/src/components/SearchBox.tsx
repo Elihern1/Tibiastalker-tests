@@ -43,22 +43,31 @@ export default function SearchBox({
   }
 
   return (
-    <form aria-label="search form" onSubmit={handleSubmit}>
+    <form aria-label="search form" onSubmit={handleSubmit}
+          data-testid="search-form">
+
       <input
         type="text"
         value={q}
         placeholder={placeholder}
         aria-label="search input"
+        data-testid="search-input"
         onChange={(e) => handleChange(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter") handleSubmit();
         }}
       />
-      <button type="submit" disabled={!q.trim()}>
+
+      <button
+        type="submit"
+        disabled={!q.trim()}
+        data-testid="search-button"
+      >
         Search
       </button>
+
       {erreur && (
-        <p role="alert" aria-label="search-error">
+        <p role="alert" aria-label="search-error" data-testid="search-error">
           {erreur}
         </p>
       )}

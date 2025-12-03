@@ -19,12 +19,22 @@ export default function ResultCard({
   highlight = false,
   onSelect,
 }: ResultCardProps) {
+  
+  // Fonction de clic principale
+  function handleClick() {
+    if (href) {
+      window.location.href = href;
+    }
+  }
+
   return (
     <article
-      role="article"
+      role={href ? "button" : "article"}
       aria-label={`Result for ${name}`}
       className={`result-card ${highlight ? 'is-highlighted' : ''}`}
       data-testid="result-card"
+      onClick={href ? handleClick : undefined}
+      style={{ cursor: href ? "pointer" : "default" }}
     >
       <header>
         <h2>{name}</h2>

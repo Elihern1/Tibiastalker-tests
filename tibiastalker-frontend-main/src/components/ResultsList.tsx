@@ -80,13 +80,13 @@ export default function ResultsList({ query, endpoint }: ResultsListProps) {
     };
   }, [query, endpoint]);
 
-  if (state === "idle") return <p aria-label="idle">Enter a query…</p>;
-  if (state === "loading") return <p role="status">Loading…</p>;
-  if (state === "error") return <p role="alert">Error: {error}</p>;
-  if (items.length === 0) return <p aria-label="no-results">No results</p>;
+  if (state === "idle") return <p aria-label="idle" data-testid="idle">Enter a query…</p>;
+  if (state === "loading") return <p role="status" data-testid="loading">Loading…</p>;
+  if (state === "error") return <p role="alert" data-testid="error">Error: {error}</p>;
+  if (items.length === 0) return <p aria-label="no-results" data-testid="no-results">No results</p>;
 
   return (
-    <section aria-label="results">
+    <section aria-label="results" data-testid="results-list">
       {items.map((c) => (
         <ResultCard
           key={c.id}
@@ -95,9 +95,9 @@ export default function ResultsList({ query, endpoint }: ResultsListProps) {
           vocation={c.vocation}
           server={c.server}
           href={`/characters/${encodeURIComponent(c.name)}`}
+          data-testid="result-card"
         />
       ))}
     </section>
   );
 }
-

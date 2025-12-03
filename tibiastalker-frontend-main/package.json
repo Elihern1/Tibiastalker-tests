@@ -27,7 +27,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "^20.19.24",
     "@vitest/coverage-v8": "^4.0.7",
-    "cypress": "^15.6.0",
+    "cypress": "^15.7.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "^16.0.3",
     "eslint-config-prettier": "^9.1.0",
@@ -50,7 +50,9 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "ct:open": "cypress open --component",
-    "ct:run": "cypress run --component"
+    "ct:run": "cypress run --component",
+    "e2e:open": "cypress open --e2e",
+    "e2e:run": "cypress run --e2e"
   },
   "engines": {
     "node": "^20"

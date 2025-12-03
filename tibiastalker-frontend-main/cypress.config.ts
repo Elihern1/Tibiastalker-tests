@@ -8,7 +8,14 @@ export default defineConfig({
     },
     indexHtmlFile: "cypress/support/component-index.html",
   },
+
   env: {
     NEXT_TELEMETRY_DISABLED: 1,
+  },
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
   },
 });
