@@ -1,28 +1,24 @@
-describe("Navigation - retour arrière conserve la recherche", () => {
-  it("revient avec le champ rempli", () => {
+describe("returns to home without blank page", () => {
+  it("works with real API", () => {
     cy.visit("http://localhost:3000/");
-    cy.contains("Click here").click({ force: true });
 
-    cy.get('input[placeholder="Character Name"]').type("Knight", { force: true });
+    // Entrer un nom inexistant
+    cy.get('input[placeholder="Character Name"]').type("Elibert", { force: true });
+
+    // Cliquer sur Search malgré le dropdown
     cy.contains("button", "Search").click({ force: true });
 
-    // Ici mock d'un personnage pour afficher CharacterResult
-    cy.intercept("GET", "**/characters/Knight", {
-      statusCode: 200,
-      body: {
-        name: "Knight",
-        level: 150,
-        vocation: "Elite Knight",
-        server: "Antica"
-      }
-    });
+    // Vérifier erreur
+    cy.contains("not found").should("exist");
 
-    cy.contains("Knight").should("exist");
+    // Attendre que les suggestions (réelles API) apparaissent
+    cy.get("table tbody tr").should("have.length.above", 3);
 
-    // Retour arrière
-    cy.go("back");
+    // Revenir à l'accueil
+    cy.get(".logo").first().click({ force: true });
 
-    // Le champ de recherche doit encore contenir "Knight"
-    cy.get('input[placeholder="Character Name"]').should("have.value", "Knight");
+    // Vérifier que l'accueil est affiché
+    cy.contains("Click here").should("exist");
+    cy.url().should("eq", "http://localhost:3000/");
   });
 });
