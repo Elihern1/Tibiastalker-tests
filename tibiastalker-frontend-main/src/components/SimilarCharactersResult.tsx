@@ -9,43 +9,65 @@ import { toPascalCase } from "../utils/stringModificator";
 import PaginationResult from "./PaginationResult";
 
 type SimilarCharactersProps = {
-  similarCharacters: SimilarCharactersResponse;
+  similarCharacters: SimilarCharactersResponse | null;
 };
 
 function SimilarCharactersResult(props: SimilarCharactersProps) {
   const { similarCharacters } = props;
+
   const startSearchingCharacter = useContext(SearchedCharacterNameContext);
   const [currentPage, setCurrentPage] = useContext(SimilarCharactersCurrentPageContext);
+
+  // 🛡️ PROTECTION COMPLÈTE : si undefined, null, pas de names, ou names non-array → on ne rend rien
+  if (
+    !similarCharacters ||
+    !Array.isArray(similarCharacters.names) ||
+    similarCharacters.names.length === 0
+  ) {
+    return null;
+  }
+
   const pageSize = 10;
-  const totalPages = Math.ceil(props.similarCharacters.totalCount / pageSize);
+  const totalPages = Math.ceil(similarCharacters.totalCount / pageSize);
 
   return (
     <Container>
-      {similarCharacters && (
-        <Row>
-          <Col xs="auto" style={{ minWidth: "320px" }} className="d-flex flex-column align-items-center">
-            <Table striped bordered hover variant="dark" className="text-center">
-              <thead>
-                <tr>
-                  <th className="bg-success">
-                    <i>SIMILAR CHARACTERS</i>
-                  </th>
+      <Row>
+        <Col
+          xs="auto"
+          style={{ minWidth: "320px" }}
+          className="d-flex flex-column align-items-center"
+        >
+          <Table striped bordered hover variant="dark" className="text-center">
+            <thead>
+              <tr>
+                <th className="bg-success">
+                  <i>SIMILAR CHARACTERS</i>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {similarCharacters.names.map((name) => (
+                <tr key={name}>
+                  <td
+                    className="character-link"
+                    onClick={() => startSearchingCharacter(name)}
+                  >
+                    {toPascalCase(name)}
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {similarCharacters.names.map(name => (
-                  <tr key={name}>
-                    <td className="character-link" onClick={() => startSearchingCharacter(name)}>
-                      {toPascalCase(name)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-            <PaginationResult setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
-          </Col>
-        </Row>
-      )}
+              ))}
+            </tbody>
+          </Table>
+
+          <PaginationResult
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+            totalPages={totalPages}
+          />
+        </Col>
+      </Row>
     </Container>
   );
 }

@@ -7,7 +7,7 @@ import { SearchFormProps } from "./types";
 export const SearchForm = ({ onSubmit, isLoading, value }: SearchFormProps) => {
   const { promptList, getPromptList, clearPromptList } = usePromptList();
 
-  // 🔥 Protection anti-crash : garantit TOUJOURS un array
+  // 🔥 Protection : TOUJOURS un tableau
   const safePromptList: string[] = Array.isArray(promptList) ? promptList : [];
 
   const [inputValue, setInputValue] = useState(value);
@@ -59,20 +59,24 @@ export const SearchForm = ({ onSubmit, isLoading, value }: SearchFormProps) => {
           }}
         />
 
-        <Dropdown.Menu
-          show={isFocusOnInput && safePromptList.length > 0}
-          onFocus={abortInputBlurWhenFocusOnPrompt}
-        >
-          {safePromptList.length > 0 &&
-            safePromptList.map((item: string) => (
+        {/* 🔥 Version sécurisée */}
+        {safePromptList.length > 0 && (
+          <Dropdown.Menu
+            show={isFocusOnInput}
+            onFocus={abortInputBlurWhenFocusOnPrompt}
+          >
+            {safePromptList.map((item: string) => (
               <Dropdown.Item
                 key={item}
-                onClick={() => submit(item)}
+                onClick={() => {
+                  submit(item);
+                }}
               >
                 {item}
               </Dropdown.Item>
             ))}
-        </Dropdown.Menu>
+          </Dropdown.Menu>
+        )}
       </Col>
 
       <Col xs="auto" className="p-1">
