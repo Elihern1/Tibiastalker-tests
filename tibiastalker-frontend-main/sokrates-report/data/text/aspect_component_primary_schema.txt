@@ -1,0 +1,3 @@
+Path	Lines of Code
+schema/character.ts	12
+schema/search.ts	6

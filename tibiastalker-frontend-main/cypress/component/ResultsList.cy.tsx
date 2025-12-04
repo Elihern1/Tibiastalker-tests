@@ -13,12 +13,14 @@ describe("ResultsList (CT)", () => {
       },
     ];
 
-    cy.stub(globalThis as any, "fetch")
-      .resolves({
-        ok: true,
-        json: async () => fauxPersonnages,
-      } as Response)
-      .as("fetchPersonnages");
+    // --- Correction ici ---
+    const fetchStub = cy.stub(globalThis as any, "fetch").resolves({
+      ok: true,
+      json: async () => fauxPersonnages,
+    } as Response);
+
+    cy.wrap(fetchStub).as("fetchPersonnages");
+    // -----------------------
 
     mount(<ResultsList query="Sir Exura" endpoint="/api/search?name=" />);
 
@@ -39,12 +41,14 @@ describe("ResultsList (CT)", () => {
       } as any,
     ];
 
-    cy.stub(globalThis as any, "fetch")
-      .resolves({
-        ok: true,
-        json: async () => donneesInvalides,
-      } as Response)
-      .as("fetchPersonnagesInvalides");
+    // --- Correction ici ---
+    const fetchStub = cy.stub(globalThis as any, "fetch").resolves({
+      ok: true,
+      json: async () => donneesInvalides,
+    } as Response);
+
+    cy.wrap(fetchStub).as("fetchPersonnagesInvalides");
+    // -----------------------
 
     mount(<ResultsList query="Invalide" endpoint="/api/search?name=" />);
 

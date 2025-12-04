@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>export function useCharacterSearch()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">export function useCharacterSearch()</h3>
+<p style="margin-top: 4px">in <i>features/CharacterSearch/hooks/useCharacterSearch.ts [5:50]</i></p>
+<ul>
+    <li><b>40</b> lines of code</li>
+    <li><b>3</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="ts">
+export function useCharacterSearch() {
+  const [loading, setLoading] = useState(false);
+  const [searchedName, setSearchedName] = useState(&quot;&quot;);
+  const [character, setCharacter] = useState&lt;CharacterResponse | null&gt;(null);
+  const [error, setError] = useState&lt;ErrorResponse | null&gt;(null);
+  const [similar, setSimilar] = useState&lt;SimilarCharactersResponse | null&gt;(null);
+  const [page, setPage] = useState(1);
+
+  const search = useCallback(async (name: string) =&gt; {
+    setLoading(true);
+    setSearchedName(name);
+    setError(null);
+    setCharacter(null);
+    setSimilar(null);
+
+    const result = await fetchCharacter(name);
+
+    if (&quot;detail&quot; in result) {
+      setError(result);
+    } else {
+      setCharacter(result);
+    }
+
+    setLoading(false);
+  }, []);
+
+  useEffect(() =&gt; {
+    if (error?.status === 404) {
+      setLoading(true);
+      fetchSimilarCharacters(searchedName, page)
+        .then((res) =&gt; setSimilar(res))
+        .finally(() =&gt; setLoading(false));
+    }
+  }, [page, error, searchedName]);
+
+  return {
+    loading,
+    searchedName,
+    character,
+    error,
+    similar,
+    page,
+    setPage,
+    search,
+  };
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

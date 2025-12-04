@@ -1,0 +1,4 @@
+Path	Lines of Code
+services/characters/characterApi.ts	19
+services/characters/index.ts	1
+services/realtime/liveCommunication.ts	24

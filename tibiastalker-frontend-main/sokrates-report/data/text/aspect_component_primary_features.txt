@@ -1,0 +1,17 @@
+Path	Lines of Code
+features/CharacterSearch/components/SearchForm/SearchForm.tsx	75
+features/CharacterSearch/components/SearchForm/index.tsx	1
+features/CharacterSearch/components/SearchForm/types.tsx	5
+features/CharacterSearch/hooks/useCharacterSearch.ts	43
+features/CharacterSearch/hooks/usePromptList/fetchPromptList.ts	31
+features/CharacterSearch/hooks/usePromptList/index.tsx	1
+features/CharacterSearch/hooks/usePromptList/types.tsx	2
+features/CharacterSearch/hooks/usePromptList/usePromptList.tsx	27
+features/CharacterSearch/index.tsx	1
+features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx	35
+features/Tracking/components/TrackingCharacter/getColorByStatus.ts	12
+features/Tracking/components/TrackingCharacter/index.tsx	1
+features/Tracking/enums.ts	5
+features/Tracking/hook/useCharacterTracking.tsx	20
+features/Tracking/index.tsx	1
+features/Tracking/store/charactersTrackingStore.ts	46

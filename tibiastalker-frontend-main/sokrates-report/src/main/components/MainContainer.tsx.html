@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>components/MainContainer.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/MainContainer.tsx (<b>95</b> lines of code) (<a href="MainContainer.tsx">raw</a>):</h3>
+<div id="editor">import { useCallback, useEffect, useState } from &quot;react&quot;;
+import { Col, Container, Row } from &quot;react-bootstrap&quot;;
+
+import { SearchedCharacterNameContext } from &quot;../contexts/SearchedCharacterNameContext&quot;;
+import { SimilarCharactersCurrentPageContext } from &quot;../contexts/SimilarCharactersCurrentPageContext&quot;;
+import { SearchForm } from &quot;../features/CharacterSearch&quot;;
+import { CharacterResponse, ErrorResponse, SimilarCharactersResponse } from &quot;../types/CharacterResult&quot;;
+import StartSearchingCharacter from &quot;../types/StartSearchingCharacter&quot;;
+import { LOGO_SIZE } from &quot;../utils/constants&quot;;
+
+import {
+  fetchCharacter,
+  fetchSimilarCharacters
+} from &quot;../services/characters&quot;;
+
+import CharacterResult from &quot;./CharacterResult&quot;;
+import TibiaLogo2 from &quot;./logos/TibiaLogo2&quot;;
+import ErrorResult from &quot;./RenderError&quot;;
+import SimilarCharactersResult from &quot;./SimilarCharactersResult&quot;;
+
+function MainContainer() {
+  const [currentPage, setCurrentPage] = useState&lt;number&gt;(0);
+  const [loading, setLoading] = useState(false);
+  const [characterResponse, setCharacterResponse] = useState&lt;CharacterResponse | ErrorResponse | null&gt;(null);
+  const [characterData, setCharacterData] = useState&lt;CharacterResponse | null&gt;(null);
+  const [errorData, setErrorData] = useState&lt;ErrorResponse | null&gt;(null);
+  const [similarCharacters, setSimilarCharacters] = useState&lt;SimilarCharactersResponse | null&gt;(null);
+  const [searchedCharacterName, setSearchedCharacterName] = useState&lt;string&gt;(&quot;&quot;);
+
+  const showLoader = () =&gt; setLoading(true);
+  const hideLoader = () =&gt; setLoading(false);
+
+  const startSearchingCharacter: StartSearchingCharacter = useCallback((characterName: string) =&gt; {
+    showLoader();
+    setSearchedCharacterName(characterName);
+
+    fetchCharacter(characterName)
+      .then(setCharacterResponse)
+      .then(() =&gt; hideLoader());
+
+    setSimilarCharacters(null);
+  }, []);
+
+  useEffect(() =&gt; {
+    setErrorData(null);
+    setCharacterData(null);
+
+    if (characterResponse === null) return;
+
+    if (&quot;detail&quot; in characterResponse) {
+      setErrorData(characterResponse);
+    } else if (&quot;name&quot; in characterResponse) {
+      setCharacterData(characterResponse);
+    }
+  }, [characterResponse]);
+
+  useEffect(() =&gt; {
+    if (errorData?.status === 404) {
+      showLoader();
+
+      fetchSimilarCharacters(searchedCharacterName, currentPage)
+        .then(setSimilarCharacters)
+        .then(() =&gt; hideLoader());
+    }
+  }, [currentPage]);
+
+  useEffect(() =&gt; {
+    if (errorData?.status === 404) {
+      setCurrentPage(1);
+    }
+  }, [errorData]);
+
+  const [isLogoClicked, setIsLogoClicked] = useState(false);
+
+  const toggleWidth = () =&gt; {
+    setIsLogoClicked(true);
+  };
+
+  const smallLogoSize = LOGO_SIZE * 0.4;
+
+  return (
+    &lt;SearchedCharacterNameContext.Provider value={startSearchingCharacter}&gt;
+      &lt;SimilarCharactersCurrentPageContext.Provider value={[currentPage, setCurrentPage]}&gt;
+        &lt;Container fluid className=&quot;d-flex flex-column align-items-center p-0&quot;&gt;
+          &lt;div
+            className={`absoluteCenter align-items-center d-flex flex-column ${
+              isLogoClicked ? &quot;fadeOut&quot; : &quot;transform-50&quot;
+            }`}
+            onClick={toggleWidth}
+          &gt;
+            &lt;div className=&quot;title logo&quot;&gt;Tibia Stalker&lt;/div&gt;
+            &lt;div className=&quot;subtitle logo&quot;&gt;Click here!&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;Row style={{ width: &quot;360px&quot; }} className=&quot;align-items-center&quot;&gt;
+            &lt;Col xs=&quot;auto&quot; className=&quot;p-0 logo&quot; onClick={toggleWidth}&gt;
+              &lt;div className={isLogoClicked ? &quot;targetPosition&quot; : &quot;centerPosition&quot;}&gt;
+                &lt;TibiaLogo2 size={smallLogoSize} /&gt;
+              &lt;/div&gt;
+            &lt;/Col&gt;
+
+            &lt;Col className={isLogoClicked ? &quot;fadeIn&quot; : &quot;fadeOut&quot;}&gt;
+              &lt;SearchForm isLoading={loading} value={searchedCharacterName} onSubmit={startSearchingCharacter} /&gt;
+            &lt;/Col&gt;
+          &lt;/Row&gt;
+
+          &lt;Row&gt;
+            &lt;Col xs=&quot;auto&quot; style={{ minWidth: &quot;320px&quot;, marginLeft: smallLogoSize }}&gt;
+              {characterData &amp;&amp; &lt;CharacterResult character={characterData} /&gt;}
+              {errorData &amp;&amp; &lt;ErrorResult error={errorData} /&gt;}
+              {similarCharacters &amp;&amp; &lt;SimilarCharactersResult similarCharacters={similarCharacters} /&gt;}
+            &lt;/Col&gt;
+          &lt;/Row&gt;
+        &lt;/Container&gt;
+      &lt;/SimilarCharactersCurrentPageContext.Provider&gt;
+    &lt;/SearchedCharacterNameContext.Provider&gt;
+  );
+}
+
+export default MainContainer;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

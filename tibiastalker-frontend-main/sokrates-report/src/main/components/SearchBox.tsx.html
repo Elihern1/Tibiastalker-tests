@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>components/SearchBox.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/SearchBox.tsx (<b>65</b> lines of code) (<a href="SearchBox.tsx">raw</a>):</h3>
+<div id="editor">import React, { useState, FormEvent } from &quot;react&quot;;
+import { rechercheSchema } from &quot;../schema/search&quot;;
+
+export interface SearchBoxProps {
+  initialQuery?: string;
+  placeholder?: string;
+  onChange?: (q: string) =&gt; void;
+  onSubmit?: (q: string) =&gt; void;
+}
+
+export default function SearchBox({
+  initialQuery = &quot;&quot;,
+  placeholder = &quot;Search&hellip;&quot;,
+  onChange,
+  onSubmit,
+}: SearchBoxProps) {
+  const [q, setQ] = useState&lt;string&gt;(initialQuery);
+  const [erreur, setErreur] = useState&lt;string&gt;(&quot;&quot;);
+
+  function handleChange(value: string) {
+    setQ(value);
+    setErreur(&quot;&quot;);
+    onChange?.(value);
+  }
+
+  function handleSubmit(e?: FormEvent) {
+    e?.preventDefault?.();
+    const brut = q;
+
+    const parsed = rechercheSchema.safeParse(brut);
+
+    if (!parsed.success) {
+      const msg =
+        parsed.error.issues[0]?.message ||
+        &quot;La requ&ecirc;te de recherche est invalide.&quot;;
+      setErreur(msg);
+      return;
+    }
+
+    const valeurValide = parsed.data;
+    setErreur(&quot;&quot;);
+    onSubmit?.(valeurValide);
+  }
+
+  return (
+    &lt;form aria-label=&quot;search form&quot; onSubmit={handleSubmit}
+          data-testid=&quot;search-form&quot;&gt;
+
+      &lt;input
+        type=&quot;text&quot;
+        value={q}
+        placeholder={placeholder}
+        aria-label=&quot;search input&quot;
+        data-testid=&quot;search-input&quot;
+        onChange={(e) =&gt; handleChange(e.target.value)}
+        onKeyDown={(e) =&gt; {
+          if (e.key === &quot;Enter&quot;) handleSubmit();
+        }}
+      /&gt;
+
+      &lt;button
+        type=&quot;submit&quot;
+        disabled={!q.trim()}
+        data-testid=&quot;search-button&quot;
+      &gt;
+        Search
+      &lt;/button&gt;
+
+      {erreur &amp;&amp; (
+        &lt;p role=&quot;alert&quot; aria-label=&quot;search-error&quot; data-testid=&quot;search-error&quot;&gt;
+          {erreur}
+        &lt;/p&gt;
+      )}
+    &lt;/form&gt;
+  );
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

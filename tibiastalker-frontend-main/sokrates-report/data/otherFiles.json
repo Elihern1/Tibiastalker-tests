@@ -1,0 +1,15 @@
+[ {
+  "relativePath" : "features/CharacterSearch/README.md",
+  "extension" : "md",
+  "linesOfCode" : 8,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/README.md",
+  "extension" : "md",
+  "linesOfCode" : 2,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+} ]

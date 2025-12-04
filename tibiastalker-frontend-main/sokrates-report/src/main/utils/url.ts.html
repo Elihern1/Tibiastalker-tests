@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>utils/url.ts</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">utils/url.ts (<b>13</b> lines of code) (<a href="url.ts">raw</a>):</h3>
+<div id="editor">import { normalizeCharacterName } from './strings';
+
+/**
+ * Construit l'URL d'un personnage.
+ * - Normalise le nom (reutilise normalizeCharacterName)
+ * - Encode le nom pour l'URL
+ * - Ajoute des query params (lang, server) si fournis (non vides)
+ * - L&egrave;ve une erreur si le nom est invalide/vide
+ *
+ * Exemple:
+ *   buildCharacterUrl(&quot;  sIr  exUrA &quot;)         -&gt; &quot;/characters/Sir%20Exura&quot;
+ *   buildCharacterUrl(&quot;j&oacute;&atilde;o d'&aacute;rvore&quot;,{lang:'pl',server:'Antica'})
+ *     -&gt; &quot;/characters/J&oacute;&atilde;o%20D'%C3%81rvore?lang=pl&amp;server=Antica&quot;
+ */
+export function buildCharacterUrl(
+  name: string,
+  opts?: { lang?: string; server?: string }
+): string {
+  const normalized = normalizeCharacterName(name); // l&egrave;ve d&eacute;j&agrave; si invalide
+  const pathname = `/characters/${encodeURIComponent(normalized)}`;
+
+  const params = new URLSearchParams();
+  if (opts?.lang &amp;&amp; opts.lang.trim()) params.set('lang', opts.lang.trim());
+  if (opts?.server &amp;&amp; opts.server.trim()) params.set('server', opts.server.trim());
+
+  const qs = params.toString();
+  return qs ? `${pathname}?${qs}` : pathname;
+}</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

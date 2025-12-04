@@ -1,0 +1,3 @@
+Path	Lines of Code
+types/CharacterResult.ts	29
+types/StartSearchingCharacter.ts	2

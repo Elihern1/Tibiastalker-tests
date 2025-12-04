@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { Col, Container, Row } from "react-bootstrap";
 
 import { SearchedCharacterNameContext } from "../contexts/SearchedCharacterNameContext";
@@ -7,11 +8,20 @@ import { SearchForm } from "../features/CharacterSearch";
 import { CharacterResponse, ErrorResponse, SimilarCharactersResponse } from "../types/CharacterResult";
 import StartSearchingCharacter from "../types/StartSearchingCharacter";
 import { LOGO_SIZE } from "../utils/constants";
-import { fetchCharacterData, fetchSimilarCharactersData } from "../utils/FetchData";
-import CharacterResult from "./CharacterResult";
+
+import { fetchCharacter, fetchSimilarCharacters } from "../services/characters";
 import TibiaLogo2 from "./logos/TibiaLogo2";
-import ErrorResult from "./RenderError";
-import SimilarCharactersResult from "./SimilarCharactersResult";
+
+const CharacterResult = dynamic(() => import("./CharacterResult"), {
+  ssr: false,
+});
+const ErrorResult = dynamic(() => import("./RenderError"), {
+  ssr: false,
+});
+const SimilarCharactersResult = dynamic(
+  () => import("./SimilarCharactersResult"),
+  { ssr: false }
+);
 
 function MainContainer() {
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -25,46 +35,52 @@ function MainContainer() {
   const showLoader = () => setLoading(true);
   const hideLoader = () => setLoading(false);
 
+  /* Recherche d’un personnage */
   const startSearchingCharacter: StartSearchingCharacter = useCallback((characterName: string) => {
     showLoader();
     setSearchedCharacterName(characterName);
-    fetchCharacterData(characterName, setCharacterResponse).then(() => hideLoader());
+
+    fetchCharacter(characterName)
+      .then(setCharacterResponse)
+      .finally(hideLoader);
+
     setSimilarCharacters(null);
   }, []);
 
+  /* Gestion réponse : succès / erreur */
   useEffect(() => {
     setErrorData(null);
     setCharacterData(null);
 
-    if (characterResponse === null) {
-      return;
-    }
+    if (characterResponse === null) return;
 
     if ("detail" in characterResponse) {
       setErrorData(characterResponse);
-    } else if ("name" in characterResponse) {
+    } else {
       setCharacterData(characterResponse);
     }
   }, [characterResponse]);
 
+  /* Si erreur 404 → chercher personnages similaires */
   useEffect(() => {
     if (errorData?.status === 404) {
       showLoader();
-      fetchSimilarCharactersData(searchedCharacterName, currentPage, setSimilarCharacters).then(() => hideLoader());
+      fetchSimilarCharacters(searchedCharacterName, currentPage)
+        .then(setSimilarCharacters)
+        .finally(hideLoader);
     }
-  }, [currentPage]);
+  }, [currentPage, errorData, searchedCharacterName]);
 
+  /* Reset page si erreur apparait */
   useEffect(() => {
     if (errorData?.status === 404) {
       setCurrentPage(1);
     }
   }, [errorData]);
 
+  /* Animation du logo */
   const [isLogoClicked, setIsLogoClicked] = useState(false);
-
-  const toggleWidth = () => {
-    setIsLogoClicked(true);
-  };
+  const toggleWidth = () => setIsLogoClicked(true);
 
   const smallLogoSize = LOGO_SIZE * 0.4;
 
@@ -72,20 +88,32 @@ function MainContainer() {
     <SearchedCharacterNameContext.Provider value={startSearchingCharacter}>
       <SimilarCharactersCurrentPageContext.Provider value={[currentPage, setCurrentPage]}>
         <Container fluid className="d-flex flex-column align-items-center p-0">
-          <div className={`absoluteCenter align-items-center d-flex flex-column ${isLogoClicked ? "fadeOut" : "transform-50"}`} onClick={toggleWidth}>
+          <div
+            className={`absoluteCenter align-items-center d-flex flex-column ${
+              isLogoClicked ? "fadeOut" : "transform-50"
+            }`}
+            onClick={toggleWidth}
+          >
             <div className="title logo">Tibia Stalker</div>
             <div className="subtitle logo">Click here!</div>
           </div>
+
           <Row style={{ width: "360px" }} className="align-items-center">
             <Col xs="auto" className="p-0 logo" onClick={toggleWidth}>
               <div className={isLogoClicked ? "targetPosition" : "centerPosition"}>
                 <TibiaLogo2 size={smallLogoSize} />
               </div>
             </Col>
+
             <Col className={isLogoClicked ? "fadeIn" : "fadeOut"}>
-              <SearchForm isLoading={loading} value={searchedCharacterName} onSubmit={startSearchingCharacter} />
+              <SearchForm
+                isLoading={loading}
+                value={searchedCharacterName}
+                onSubmit={startSearchingCharacter}
+              />
             </Col>
           </Row>
+
           <Row>
             <Col xs="auto" style={{ minWidth: "320px", marginLeft: smallLogoSize }}>
               {characterData && <CharacterResult character={characterData} />}

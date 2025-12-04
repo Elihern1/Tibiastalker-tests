@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>components/ResultCard.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/ResultCard.tsx (<b>69</b> lines of code) (<a href="ResultCard.tsx">raw</a>):</h3>
+<div id="editor">import React from 'react';
+
+export interface ResultCardProps {
+  name: string;
+  level: number;
+  vocation?: string;
+  server?: string;
+  href?: string;           // lien vers la page du personnage (optionnel)
+  highlight?: boolean;     // applique une classe sp&eacute;ciale (optionnel)
+  onSelect?: () =&gt; void;   // bouton d'action optionnel
+}
+
+export default function ResultCard({
+  name,
+  level,
+  vocation,
+  server,
+  href,
+  highlight = false,
+  onSelect,
+}: ResultCardProps) {
+  
+  // Fonction de clic principale
+  function handleClick() {
+    if (href) {
+      window.location.href = href;
+    }
+  }
+
+  return (
+    &lt;article
+      role={href ? &quot;button&quot; : &quot;article&quot;}
+      aria-label={`Result for ${name}`}
+      className={`result-card ${highlight ? 'is-highlighted' : ''}`}
+      data-testid=&quot;result-card&quot;
+      onClick={href ? handleClick : undefined}
+      style={{ cursor: href ? &quot;pointer&quot; : &quot;default&quot; }}
+    &gt;
+      &lt;header&gt;
+        &lt;h2&gt;{name}&lt;/h2&gt;
+        {href ? (
+          &lt;a href={href} aria-label={`View ${name}`}&gt;
+            View
+          &lt;/a&gt;
+        ) : null}
+      &lt;/header&gt;
+
+      &lt;dl&gt;
+        &lt;div&gt;
+          &lt;dt&gt;Level&lt;/dt&gt;
+          &lt;dd&gt;{level}&lt;/dd&gt;
+        &lt;/div&gt;
+
+        {vocation ? (
+          &lt;div&gt;
+            &lt;dt&gt;Vocation&lt;/dt&gt;
+            &lt;dd&gt;{vocation}&lt;/dd&gt;
+          &lt;/div&gt;
+        ) : null}
+
+        {server ? (
+          &lt;div&gt;
+            &lt;dt&gt;Server&lt;/dt&gt;
+            &lt;dd&gt;{server}&lt;/dd&gt;
+          &lt;/div&gt;
+        ) : null}
+      &lt;/dl&gt;
+
+      {onSelect ? (
+        &lt;footer&gt;
+          &lt;button type=&quot;button&quot; onClick={onSelect} aria-label={`Select ${name}`}&gt;
+            Select
+          &lt;/button&gt;
+        &lt;/footer&gt;
+      ) : null}
+    &lt;/article&gt;
+  );
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

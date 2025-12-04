@@ -1,32 +1,16 @@
 {
+  "root": true,
+  "extends": ["next/core-web-vitals", "prettier"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "simple-import-sort"],
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "prettier",
-    "plugin:@next/next/recommended"
-  ],
-  "root": true,
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  },
   "settings": {
     "import/resolver": {
       "typescript": true,
       "node": true
     }
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest"
-  },
-  "rules": {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "import/first": "error",
-    "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
-    "react/react-in-jsx-scope": "off"
   }
 }

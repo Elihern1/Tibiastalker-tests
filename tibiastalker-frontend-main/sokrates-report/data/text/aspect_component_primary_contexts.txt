@@ -1,0 +1,3 @@
+Path	Lines of Code
+contexts/SearchedCharacterNameContext.ts	5
+contexts/SimilarCharactersCurrentPageContext.ts	2

@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>features/CharacterSearch/hooks/usePromptList/fetchPromptList.ts</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">features/CharacterSearch/hooks/usePromptList/fetchPromptList.ts (<b>31</b> lines of code) (<a href="fetchPromptList.ts">raw</a>):</h3>
+<div id="editor">import { charactersPromptUrl } from &quot;../../../../constants/api&quot;;
+import { FetchPromptList } from &quot;./types&quot;;
+
+const fetchPromptList: FetchPromptList = async (input, setPromptData) =&gt; {
+  try {
+    const res = await fetch(
+      `${charactersPromptUrl}?searchText=${encodeURIComponent(input)}&amp;page=1&amp;pageSize=10`
+    );
+
+    if (!res.ok) {
+      console.warn(&quot;⚠️ fetchPromptList: HTTP error&quot;, res.status);
+      setPromptData([]);
+      return;
+    }
+
+    const data = await res.json();
+
+    // Robustesse : transformer la r&eacute;ponse en tableau propre
+    let safeList: string[] = [];
+
+    if (Array.isArray(data)) {
+      safeList = data.map(String);
+    } else if (data?.names &amp;&amp; Array.isArray(data.names)) {
+      // Certains backends renvoient { names: [...] }
+      safeList = data.names.map(String);
+    } else if (typeof data === &quot;string&quot;) {
+      safeList = [data];
+    } else {
+      console.warn(&quot;⚠️ fetchPromptList: r&eacute;ponse inattendue :&quot;, data);
+      safeList = [];
+    }
+
+    setPromptData(safeList);
+  } catch (err) {
+    console.error(&quot;❌ fetchPromptList: exception&quot;, err);
+    setPromptData([]);
+  }
+};
+
+export default fetchPromptList;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

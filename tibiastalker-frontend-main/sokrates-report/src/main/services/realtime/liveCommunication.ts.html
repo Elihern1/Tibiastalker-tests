@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>services/realtime/liveCommunication.ts</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">services/realtime/liveCommunication.ts (<b>24</b> lines of code) (<a href="liveCommunication.ts">raw</a>):</h3>
+<div id="editor">import * as signalR from &quot;@microsoft/signalr&quot;;
+import { characterTrackUrl } from &quot;../../constants/api&quot;;
+
+export const connection = new signalR.HubConnectionBuilder()
+  .withUrl(characterTrackUrl, {
+    skipNegotiation: true,
+    transport: signalR.HttpTransportType.WebSockets,
+    logger: signalR.LogLevel.Information,
+  })
+  .withAutomaticReconnect() // Bonus: reconnexion automatique
+  .build();
+
+connection.onclose((event) =&gt; {
+  console.log(&quot;SignalR connection closed:&quot;, event);
+});
+
+export async function startConnection() {
+  if (connection.state === signalR.HubConnectionState.Connected) {
+    return;
+  }
+
+  try {
+    await connection.start();
+    console.log(&quot;SignalR Connected.&quot;);
+  } catch (err) {
+    console.error(&quot;Error starting SignalR:&quot;, err);
+  }
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

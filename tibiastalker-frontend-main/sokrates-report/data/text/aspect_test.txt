@@ -1,0 +1,7 @@
+Path	Lines of Code
+components/__tests__/ResultCard.test.tsx	49
+components/__tests__/ResultsList.test.tsx	61
+components/__tests__/SearchBox.test.tsx	45
+utils/testing/levels.parseLevelRange.test.ts	25
+utils/testing/strings.normalizeCharacterName.test.ts	27
+utils/testing/url.buildCharacterUrl.test.ts	27

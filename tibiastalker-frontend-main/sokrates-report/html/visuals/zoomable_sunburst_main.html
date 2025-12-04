@@ -1,0 +1,540 @@
+<head>
+    <style>
+        body {
+            font-family: Sans-serif;
+            font-size: 11px;
+        }
+
+        .slice {
+            cursor: pointer;
+        }
+
+        .slice .main-arc {
+            stroke: #fff;
+            stroke-width: 1px;
+        }
+
+        .slice .hidden-arc {
+            fill: none;
+        }
+
+        .slice text {
+            pointer-events: none;
+            dominant-baseline: middle;
+            text-anchor: middle;
+        }
+    </style>
+
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+</head>
+<body>
+<script>
+    const width = window.innerWidth,
+        height = window.innerHeight,
+        maxRadius = (Math.min(width, height) / 2) - 5;
+
+    const formatNumber = d3.format(',d');
+
+    const x = d3.scaleLinear()
+        .range([0, 2 * Math.PI])
+        .clamp(true);
+
+    const y = d3.scaleSqrt()
+        .range([maxRadius * .1, maxRadius]);
+
+    const color = d3.scaleOrdinal(d3.schemeCategory20);
+
+    const partition = d3.partition();
+
+    const arc = d3.arc()
+        .startAngle(d => x(d.x0))
+        .endAngle(d => x(d.x1))
+        .innerRadius(d => Math.max(0, y(d.y0)))
+        .outerRadius(d => Math.max(0, y(d.y1)));
+
+    const middleArcLine = d => {
+        const halfPi = Math.PI / 2;
+        const angles = [x(d.x0) - halfPi, x(d.x1) - halfPi];
+        const r = Math.max(0, (y(d.y0) + y(d.y1)) / 2);
+
+        const middleAngle = (angles[1] + angles[0]) / 2;
+        const invertDirection = middleAngle > 0 && middleAngle < Math.PI; // On lower quadrants write text ccw
+        if (invertDirection) {
+            angles.reverse();
+        }
+
+        const path = d3.path();
+        path.arc(0, 0, r, angles[0], angles[1], invertDirection);
+        return path.toString();
+    };
+
+    const textFits = d => {
+        const CHAR_SPACE = 6;
+
+        const deltaAngle = x(d.x1) - x(d.x0);
+        const r = Math.max(0, (y(d.y0) + y(d.y1)) / 2);
+        const perimeter = r * deltaAngle;
+
+        return d.data.name.length * CHAR_SPACE < perimeter;
+    };
+
+    const svg = d3.select('body').append('svg')
+        .style('width', '100vw')
+        .style('height', '100vh')
+        .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
+        .on('click', () => focusOn()); // Reset zoom on canvas click
+
+    var rootData = {
+        "name": "",
+        "children": [ {
+  "name" : "App.css",
+  "color" : "",
+  "size" : 78,
+  "children" : [ ]
+}, {
+  "name" : "components",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "BasicPropertyResult.tsx",
+    "color" : "",
+    "size" : 13,
+    "children" : [ ]
+  }, {
+    "name" : "CharacterResult.tsx",
+    "color" : "",
+    "size" : 63,
+    "children" : [ ]
+  }, {
+    "name" : "CharactersArrayResult.tsx",
+    "color" : "",
+    "size" : 53,
+    "children" : [ ]
+  }, {
+    "name" : "logos",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "TibiaLogo2.tsx",
+      "color" : "",
+      "size" : 11,
+      "children" : [ ]
+    } ]
+  }, {
+    "name" : "MainContainer.tsx",
+    "color" : "",
+    "size" : 95,
+    "children" : [ ]
+  }, {
+    "name" : "PageContainer.tsx",
+    "color" : "",
+    "size" : 17,
+    "children" : [ ]
+  }, {
+    "name" : "PaginationResult.tsx",
+    "color" : "",
+    "size" : 96,
+    "children" : [ ]
+  }, {
+    "name" : "PromptCharacters.tsx",
+    "color" : "",
+    "size" : 19,
+    "children" : [ ]
+  }, {
+    "name" : "RenderError.tsx",
+    "color" : "",
+    "size" : 20,
+    "children" : [ ]
+  }, {
+    "name" : "ResultCard.tsx",
+    "color" : "",
+    "size" : 69,
+    "children" : [ ]
+  }, {
+    "name" : "ResultsList.tsx",
+    "color" : "",
+    "size" : 86,
+    "children" : [ ]
+  }, {
+    "name" : "SearchBox.tsx",
+    "color" : "",
+    "size" : 65,
+    "children" : [ ]
+  }, {
+    "name" : "SimilarCharactersResult.tsx",
+    "color" : "",
+    "size" : 60,
+    "children" : [ ]
+  }, {
+    "name" : "StringArrayResult.tsx",
+    "color" : "",
+    "size" : 35,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "constants",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "api.ts",
+    "color" : "",
+    "size" : 4,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "contexts",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "SearchedCharacterNameContext.ts",
+    "color" : "",
+    "size" : 5,
+    "children" : [ ]
+  }, {
+    "name" : "SimilarCharactersCurrentPageContext.ts",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "features",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "CharacterSearch",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "components",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "SearchForm",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "index.tsx",
+          "color" : "",
+          "size" : 1,
+          "children" : [ ]
+        }, {
+          "name" : "SearchForm.tsx",
+          "color" : "",
+          "size" : 75,
+          "children" : [ ]
+        }, {
+          "name" : "types.tsx",
+          "color" : "",
+          "size" : 5,
+          "children" : [ ]
+        } ]
+      } ]
+    }, {
+      "name" : "hooks",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "useCharacterSearch.ts",
+        "color" : "",
+        "size" : 43,
+        "children" : [ ]
+      }, {
+        "name" : "usePromptList",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "fetchPromptList.ts",
+          "color" : "",
+          "size" : 31,
+          "children" : [ ]
+        }, {
+          "name" : "index.tsx",
+          "color" : "",
+          "size" : 1,
+          "children" : [ ]
+        }, {
+          "name" : "types.tsx",
+          "color" : "",
+          "size" : 2,
+          "children" : [ ]
+        }, {
+          "name" : "usePromptList.tsx",
+          "color" : "",
+          "size" : 27,
+          "children" : [ ]
+        } ]
+      } ]
+    }, {
+      "name" : "index.tsx",
+      "color" : "",
+      "size" : 1,
+      "children" : [ ]
+    } ]
+  }, {
+    "name" : "Tracking",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "components",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "TrackingCharacter",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "getColorByStatus.ts",
+          "color" : "",
+          "size" : 12,
+          "children" : [ ]
+        }, {
+          "name" : "index.tsx",
+          "color" : "",
+          "size" : 1,
+          "children" : [ ]
+        }, {
+          "name" : "TrackingCharacter.tsx",
+          "color" : "",
+          "size" : 35,
+          "children" : [ ]
+        } ]
+      } ]
+    }, {
+      "name" : "enums.ts",
+      "color" : "",
+      "size" : 5,
+      "children" : [ ]
+    }, {
+      "name" : "hook",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "useCharacterTracking.tsx",
+        "color" : "",
+        "size" : 20,
+        "children" : [ ]
+      } ]
+    }, {
+      "name" : "index.tsx",
+      "color" : "",
+      "size" : 1,
+      "children" : [ ]
+    }, {
+      "name" : "store",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "charactersTrackingStore.ts",
+        "color" : "",
+        "size" : 46,
+        "children" : [ ]
+      } ]
+    } ]
+  } ]
+}, {
+  "name" : "pages",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "index.tsx",
+    "color" : "",
+    "size" : 14,
+    "children" : [ ]
+  }, {
+    "name" : "tracking.tsx",
+    "color" : "",
+    "size" : 41,
+    "children" : [ ]
+  }, {
+    "name" : "_app.tsx",
+    "color" : "",
+    "size" : 24,
+    "children" : [ ]
+  }, {
+    "name" : "_document.tsx",
+    "color" : "",
+    "size" : 10,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "schema",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "character.ts",
+    "color" : "",
+    "size" : 12,
+    "children" : [ ]
+  }, {
+    "name" : "search.ts",
+    "color" : "",
+    "size" : 6,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "services",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "characters",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "characterApi.ts",
+      "color" : "",
+      "size" : 19,
+      "children" : [ ]
+    }, {
+      "name" : "index.ts",
+      "color" : "",
+      "size" : 1,
+      "children" : [ ]
+    } ]
+  }, {
+    "name" : "realtime",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "liveCommunication.ts",
+      "color" : "",
+      "size" : 24,
+      "children" : [ ]
+    } ]
+  } ]
+}, {
+  "name" : "setupTests.ts",
+  "color" : "",
+  "size" : 1,
+  "children" : [ ]
+}, {
+  "name" : "types",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "CharacterResult.ts",
+    "color" : "",
+    "size" : 29,
+    "children" : [ ]
+  }, {
+    "name" : "StartSearchingCharacter.ts",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "utils",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "constants.ts",
+    "color" : "",
+    "size" : 1,
+    "children" : [ ]
+  }, {
+    "name" : "levels.ts",
+    "color" : "",
+    "size" : 17,
+    "children" : [ ]
+  }, {
+    "name" : "stringModificator.ts",
+    "color" : "",
+    "size" : 6,
+    "children" : [ ]
+  }, {
+    "name" : "strings.ts",
+    "color" : "",
+    "size" : 22,
+    "children" : [ ]
+  }, {
+    "name" : "url.ts",
+    "color" : "",
+    "size" : 13,
+    "children" : [ ]
+  } ]
+} ]
+    }
+
+
+    root = d3.hierarchy(rootData);
+    root.sum(d => d.size);
+
+    const slice = svg.selectAll('g.slice')
+        .data(partition(root).descendants());
+
+    slice.exit().remove();
+
+    const newSlice = slice.enter()
+        .append('g').attr('class', 'slice')
+        .on('click', d => {
+            d3.event.stopPropagation();
+            focusOn(d);
+        });
+
+    newSlice.append('title')
+        .text(d => d.data.name + '\n' + formatNumber(d.value));
+
+    newSlice.append('path')
+        .attr('class', 'main-arc')
+        .style('fill', d => color((d.children ? d : d.parent).data.name))
+        .attr('d', arc);
+
+    newSlice.append('path')
+        .attr('class', 'hidden-arc')
+        .attr('id', (_, i) => `hiddenArc${i}`)
+        .attr('d', middleArcLine);
+
+    const text = newSlice.append('text')
+        .attr('display', d => textFits(d) ? null : 'none');
+
+    // Add white contour
+    text.append('textPath')
+        .attr('startOffset', '50%')
+        .attr('xlink:href', (_, i) => `#hiddenArc${i}`)
+        .text(d => d.data.name)
+        .style('fill', 'none')
+        .style('stroke', '#fff')
+        .style('stroke-width', 5)
+        .style('stroke-linejoin', 'round');
+
+    text.append('textPath')
+        .attr('startOffset', '50%')
+        .attr('xlink:href', (_, i) => `#hiddenArc${i}`)
+        .text(d => d.data.name);
+
+    function focusOn(d = {x0: 0, x1: 1, y0: 0, y1: 1}) {
+        const transition = svg.transition()
+            .duration(750)
+            .tween('scale', () => {
+                const xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+                    yd = d3.interpolate(y.domain(), [d.y0, 1]);
+                return t => {
+                    x.domain(xd(t));
+                    y.domain(yd(t));
+                };
+            });
+
+        transition.selectAll('path.main-arc')
+            .attrTween('d', d => () => arc(d));
+
+        transition.selectAll('path.hidden-arc')
+            .attrTween('d', d => () => middleArcLine(d));
+
+        transition.selectAll('text')
+            .attrTween('display', d => () => textFits(d) ? null : 'none');
+
+        moveStackToFront(d);
+
+        //
+
+        function moveStackToFront(elD) {
+            svg.selectAll('.slice').filter(d => d === elD)
+                .each(function (d) {
+                    this.parentNode.appendChild(this);
+                    if (d.parent) {
+                        moveStackToFront(d.parent);
+                    }
+                })
+        }
+    }
+</script>
+</body>

@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>export async function startConnection()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">export async function startConnection()</h3>
+<p style="margin-top: 4px">in <i>services/realtime/liveCommunication.ts [17:28]</i></p>
+<ul>
+    <li><b>11</b> lines of code</li>
+    <li><b>3</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="ts">
+export async function startConnection() {
+  if (connection.state === signalR.HubConnectionState.Connected) {
+    return;
+  }
+
+  try {
+    await connection.start();
+    console.log(&quot;SignalR Connected.&quot;);
+  } catch (err) {
+    console.error(&quot;Error starting SignalR:&quot;, err);
+  }
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>function handleSubmit()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">function handleSubmit()</h3>
+<p style="margin-top: 4px">in <i>components/SearchBox.tsx [26:43]</i></p>
+<ul>
+    <li><b>15</b> lines of code</li>
+    <li><b>3</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="tsx">
+  function handleSubmit(e?: FormEvent) {
+    e?.preventDefault?.();
+    const brut = q;
+
+    const parsed = rechercheSchema.safeParse(brut);
+
+    if (!parsed.success) {
+      const msg =
+        parsed.error.issues[0]?.message ||
+        &quot;La requ&ecirc;te de recherche est invalide.&quot;;
+      setErreur(msg);
+      return;
+    }
+
+    const valeurValide = parsed.data;
+    setErreur(&quot;&quot;);
+    onSubmit?.(valeurValide);
+  }
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

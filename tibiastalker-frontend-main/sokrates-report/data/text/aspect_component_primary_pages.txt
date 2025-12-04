@@ -1,0 +1,5 @@
+Path	Lines of Code
+pages/_app.tsx	24
+pages/_document.tsx	10
+pages/index.tsx	14
+pages/tracking.tsx	41

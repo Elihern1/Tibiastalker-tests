@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>components/CharacterResult.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/CharacterResult.tsx (<b>63</b> lines of code) (<a href="CharacterResult.tsx">raw</a>):</h3>
+<div id="editor">import React from &quot;react&quot;;
+import { format } from &quot;date-fns&quot;;
+
+import { CharacterResponse } from &quot;../types/CharacterResult&quot;;
+import CharacterBasicProperty from &quot;./BasicPropertyResult&quot;;
+import CharactersArrayResult from &quot;./CharactersArrayResult&quot;;
+import StringArrayResult from &quot;./StringArrayResult&quot;;
+
+type Props = {
+  character: CharacterResponse;
+};
+
+function CharacterResult({ character }: Props) {
+  const {
+    name,
+    world,
+    vocation,
+    level,
+    lastLogin,
+    formerNames = [],
+    formerWorlds = [],
+    traded,
+    otherVisibleCharacters = [],
+    possibleInvisibleCharacters = [],
+  } = character;
+
+  return (
+    &lt;div className=&quot;d-grid mt-1&quot;&gt;
+      &lt;CharacterBasicProperty
+        propertyName=&quot;Name&quot;
+        propertyValue={`${name} ${traded ? &quot;(traded)&quot; : &quot;&quot;}`}
+      /&gt;
+
+      &lt;CharacterBasicProperty propertyName=&quot;World&quot; propertyValue={world} /&gt;
+      &lt;CharacterBasicProperty propertyName=&quot;Vocation&quot; propertyValue={vocation} /&gt;
+      &lt;CharacterBasicProperty propertyName=&quot;Level&quot; propertyValue={level} /&gt;
+
+      {/* Protection pour &eacute;viter une erreur si lastLogin = null */}
+      &lt;CharacterBasicProperty
+        propertyName=&quot;Last Login&quot;
+        propertyValue={
+          lastLogin
+            ? format(new Date(lastLogin), &quot;dd.MM.yyyy HH:mm:ss&quot;)
+            : &quot;Unknown&quot;
+        }
+      /&gt;
+
+      {formerNames.length &gt; 0 &amp;&amp; (
+        &lt;StringArrayResult headerName=&quot;Former Names&quot; propertyValue={formerNames} /&gt;
+      )}
+
+      {formerWorlds.length &gt; 0 &amp;&amp; (
+        &lt;StringArrayResult headerName=&quot;Former Worlds&quot; propertyValue={formerWorlds} /&gt;
+      )}
+
+      {otherVisibleCharacters.length &gt; 0 &amp;&amp; (
+        &lt;StringArrayResult
+          headerName=&quot;Other Visible Characters&quot;
+          propertyValue={otherVisibleCharacters}
+          isCharacterName
+        /&gt;
+      )}
+
+      {possibleInvisibleCharacters.length &gt; 0 &amp;&amp; (
+        &lt;CharactersArrayResult
+          propertyName=&quot;Possible Other Characters&quot;
+          propertyValue={possibleInvisibleCharacters}
+        /&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+
+export default CharacterResult;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

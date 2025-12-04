@@ -1,0 +1,43 @@
+[ {
+  "relativePath" : "components/__tests__/ResultCard.test.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 49,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/__tests__/ResultsList.test.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 61,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/__tests__/SearchBox.test.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 45,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "utils/testing/levels.parseLevelRange.test.ts",
+  "extension" : "ts",
+  "linesOfCode" : 25,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "utils/testing/strings.normalizeCharacterName.test.ts",
+  "extension" : "ts",
+  "linesOfCode" : 27,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "utils/testing/url.buildCharacterUrl.test.ts",
+  "extension" : "ts",
+  "linesOfCode" : 27,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+} ]

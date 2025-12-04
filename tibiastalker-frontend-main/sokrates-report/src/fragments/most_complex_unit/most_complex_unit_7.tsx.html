@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>export default function SearchBox()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">export default function SearchBox()</h3>
+<p style="margin-top: 4px">in <i>components/SearchBox.tsx [11:76]</i></p>
+<ul>
+    <li><b>37</b> lines of code</li>
+    <li><b>3</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="tsx">
+export default function SearchBox({
+  initialQuery = &quot;&quot;,
+  placeholder = &quot;Search&hellip;&quot;,
+  onChange,
+  onSubmit,
+}: SearchBoxProps) {
+  const [q, setQ] = useState&lt;string&gt;(initialQuery);
+  const [erreur, setErreur] = useState&lt;string&gt;(&quot;&quot;);
+
+  function handleChange(value: string) {
+    setQ(value);
+    setErreur(&quot;&quot;);
+    onChange?.(value);
+  }
+
+  function handleSubmit(e?: FormEvent) {
+    e?.preventDefault?.();
+    const brut = q;
+
+    const parsed = rechercheSchema.safeParse(brut);
+
+    if (!parsed.success) {
+      const msg =
+        parsed.error.issues[0]?.message ||
+        &quot;La requ&ecirc;te de recherche est invalide.&quot;;
+      setErreur(msg);
+      return;
+    }
+
+    const valeurValide = parsed.data;
+    setErreur(&quot;&quot;);
+    onSubmit?.(valeurValide);
+  }
+
+  return (
+    &lt;form aria-label=&quot;search form&quot; onSubmit={handleSubmit}
+          data-testid=&quot;search-form&quot;&gt;
+
+      &lt;input
+        type=&quot;text&quot;
+        value={q}
+        placeholder={placeholder}
+        aria-label=&quot;search input&quot;
+        data-testid=&quot;search-input&quot;
+        onChange={(e) =&gt; handleChange(e.target.value)}
+        onKeyDown={(e) =&gt; {
+          if (e.key === &quot;Enter&quot;) handleSubmit();
+        }}
+      /&gt;
+
+      &lt;button
+        type=&quot;submit&quot;
+        disabled={!q.trim()}
+        data-testid=&quot;search-button&quot;
+      &gt;
+        Search
+      &lt;/button&gt;
+
+      {erreur &amp;&amp; (
+        &lt;p role=&quot;alert&quot; aria-label=&quot;search-error&quot; data-testid=&quot;search-error&quot;&gt;
+          {erreur}
+        &lt;/p&gt;
+      )}
+    &lt;/form&gt;
+  );
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

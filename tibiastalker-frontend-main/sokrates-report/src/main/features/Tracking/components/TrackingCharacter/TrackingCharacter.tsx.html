@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx (<b>35</b> lines of code) (<a href="TrackingCharacter.tsx">raw</a>):</h3>
+<div id="editor">import { CSSProperties, useState } from &quot;react&quot;;
+
+import { CharacterStatus } from &quot;../../enums&quot;;
+import { useCharacterTracking } from &quot;../../hook/useCharacterTracking&quot;;
+import getColorByStatus from &quot;./getColorByStatus&quot;;
+
+type TrackingCharacterProps = {
+  characterName: string;
+};
+
+const statusStyle: CSSProperties = {
+  display: &quot;inline-block&quot;,
+  backgroundColor: getColorByStatus(CharacterStatus.unknown),
+  borderRadius: &quot;100%&quot;,
+  minWidth: &quot;1em&quot;,
+  minHeight: &quot;1em&quot;,
+};
+
+export const TrackingCharacter = ({ characterName }: TrackingCharacterProps) =&gt; {
+  const [isTracking, setIsTracking] = useState(false);
+  const { track, untrack, onlineStatus } = useCharacterTracking(characterName);
+
+  const toggleTrack = async () =&gt; {
+    if (!isTracking) {
+      track();
+    } else {
+      untrack();
+    }
+
+    setIsTracking(value =&gt; !value);
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;span&gt;{characterName}&lt;/span&gt;{&quot; &quot;}
+      &lt;button type=&quot;button&quot; onClick={toggleTrack}&gt;
+        {isTracking ? &quot;untrack&quot; : &quot;track&quot;}
+      &lt;/button&gt;{&quot; &quot;}
+      &lt;span style={{ ...statusStyle, backgroundColor: getColorByStatus(onlineStatus) }}&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  );
+};
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

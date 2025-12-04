@@ -13,27 +13,76 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ---------------------------
+      # Clone du dépôt
+      # ---------------------------
       - name: Checkout du dépôt
         uses: actions/checkout@v4
 
+      # ---------------------------
+      # Setup Node
+      # ---------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
+      # ---------------------------
+      # Installation des dépendances
+      # ---------------------------
       - name: Installer les dépendances
         working-directory: ./tibiastalker-frontend-main
         run: npm install --legacy-peer-deps
 
+      # ---------------------------
+      # Tests Unitaires (Vitest)
+      # ---------------------------
       - name: Tests unitaires Vitest
         working-directory: ./tibiastalker-frontend-main
-        run: npm test
+        run: npm test -- --run
 
+      # ---------------------------
+      # Rapport de couverture
+      # ---------------------------
       - name: Couverture de code
         working-directory: ./tibiastalker-frontend-main
         run: npm run test:coverage
 
+      # ---------------------------
+      # Cypress Component Testing
+      # ---------------------------
       - name: Tests Cypress (Component Testing)
-        working-directory: ./tibiastalker-frontend-main
-        run: npm run ct:run
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./tibiastalker-frontend-main
+          command: npm run ct:run
+
+      # ---------------------------
+      # Cypress E2E Testing
+      # ---------------------------
+      - name: Tests Cypress (E2E)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./tibiastalker-frontend-main
+          command: npm run e2e:run
+
+      # ---------------------------
+      # Upload des screenshots Cypress
+      # ---------------------------
+      - name: Upload Cypress Screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: tibiastalker-frontend-main/cypress/screenshots
+
+      # ---------------------------
+      # Upload des vidéos Cypress
+      # ---------------------------
+      - name: Upload Cypress Videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: tibiastalker-frontend-main/cypress/videos

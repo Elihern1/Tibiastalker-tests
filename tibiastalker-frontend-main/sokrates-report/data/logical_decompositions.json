@@ -1,0 +1,418 @@
+[ {
+  "key" : "primary",
+  "components" : [ {
+    "name" : "ROOT",
+    "filesCount" : 2,
+    "linesOfCode" : 79,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.css",
+      "value" : 1,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.css",
+      "value" : 78,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 1,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "components",
+    "filesCount" : 14,
+    "linesOfCode" : 702,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 14,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 702,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "constants",
+    "filesCount" : 1,
+    "linesOfCode" : 4,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 4,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "contexts",
+    "filesCount" : 2,
+    "linesOfCode" : 7,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 7,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "features",
+    "filesCount" : 16,
+    "linesOfCode" : 306,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 11,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 5,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 169,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 137,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "pages",
+    "filesCount" : 4,
+    "linesOfCode" : 89,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 4,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 89,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "schema",
+    "filesCount" : 2,
+    "linesOfCode" : 18,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 18,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "services",
+    "filesCount" : 3,
+    "linesOfCode" : 44,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 3,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 44,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "types",
+    "filesCount" : 2,
+    "linesOfCode" : 31,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 31,
+      "description" : [ ]
+    } ]
+  }, {
+    "name" : "utils",
+    "filesCount" : 5,
+    "linesOfCode" : 59,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 5,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.ts",
+      "value" : 59,
+      "description" : [ ]
+    } ]
+  } ],
+  "componentDependencies" : [ ],
+  "componentDependenciesErrors" : [ ],
+  "logicalDecomposition" : {
+    "name" : "primary",
+    "scope" : "main",
+    "filters" : [ ],
+    "componentsFolderDepth" : 1,
+    "minComponentsCount" : 0,
+    "components" : [ {
+      "name" : "ROOT",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/components/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/constants/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/contexts/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/features/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/pages/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/schema/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/services/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/types/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      }, {
+        "pathPattern" : "src/utils/.*",
+        "contentPattern" : "",
+        "exception" : true,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "components",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/components/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "constants",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/constants/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "contexts",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/contexts/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "features",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/features/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "pages",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/pages/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "schema",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/schema/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "services",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/services/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "types",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/types/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    }, {
+      "name" : "utils",
+      "sourceFileFilters" : [ {
+        "pathPattern" : "src/utils/.*",
+        "contentPattern" : "",
+        "exception" : false,
+        "note" : ""
+      } ],
+      "files" : [ ]
+    } ],
+    "metaComponents" : [ ],
+    "groups" : [ ],
+    "includeRemainingFiles" : true,
+    "dependenciesFinder" : {
+      "useBuiltInDependencyFinders" : true,
+      "rules" : [ ],
+      "metaRules" : [ ]
+    },
+    "renderingOptions" : {
+      "orientation" : "TB",
+      "maxNumberOfDependencies" : 100,
+      "renderComponentsWithoutDependencies" : true,
+      "renderIndirectDependencies" : false,
+      "renderInternalIndirectDependencies" : false,
+      "reverseDirection" : false
+    },
+    "includeExternalComponents" : true,
+    "dependencyLinkThreshold" : 1,
+    "duplicationLinkThreshold" : 50,
+    "temporalLinkThreshold" : 1,
+    "maxSearchDepthLines" : 200
+  },
+  "linesOfCodePerComponent" : [ {
+    "name" : "ROOT",
+    "value" : 79,
+    "description" : [ ]
+  }, {
+    "name" : "components",
+    "value" : 702,
+    "description" : [ ]
+  }, {
+    "name" : "constants",
+    "value" : 4,
+    "description" : [ ]
+  }, {
+    "name" : "contexts",
+    "value" : 7,
+    "description" : [ ]
+  }, {
+    "name" : "features",
+    "value" : 306,
+    "description" : [ ]
+  }, {
+    "name" : "pages",
+    "value" : 89,
+    "description" : [ ]
+  }, {
+    "name" : "schema",
+    "value" : 18,
+    "description" : [ ]
+  }, {
+    "name" : "services",
+    "value" : 44,
+    "description" : [ ]
+  }, {
+    "name" : "types",
+    "value" : 31,
+    "description" : [ ]
+  }, {
+    "name" : "utils",
+    "value" : 59,
+    "description" : [ ]
+  } ],
+  "fileCountPerComponent" : [ {
+    "name" : "ROOT",
+    "value" : 2,
+    "description" : [ ]
+  }, {
+    "name" : "components",
+    "value" : 14,
+    "description" : [ ]
+  }, {
+    "name" : "constants",
+    "value" : 1,
+    "description" : [ ]
+  }, {
+    "name" : "contexts",
+    "value" : 2,
+    "description" : [ ]
+  }, {
+    "name" : "features",
+    "value" : 16,
+    "description" : [ ]
+  }, {
+    "name" : "pages",
+    "value" : 4,
+    "description" : [ ]
+  }, {
+    "name" : "schema",
+    "value" : 2,
+    "description" : [ ]
+  }, {
+    "name" : "services",
+    "value" : 3,
+    "description" : [ ]
+  }, {
+    "name" : "types",
+    "value" : 2,
+    "description" : [ ]
+  }, {
+    "name" : "utils",
+    "value" : 5,
+    "description" : [ ]
+  } ]
+} ]

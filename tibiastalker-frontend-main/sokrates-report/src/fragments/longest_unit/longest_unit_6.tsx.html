@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>async function run()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">async function run()</h3>
+<p style="margin-top: 4px">in <i>components/ResultsList.tsx [29:74]</i></p>
+<ul>
+    <li><b>39</b> lines of code</li>
+    <li><b>8</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="tsx">
+    async function run() {
+      try {
+        setState(&quot;loading&quot;);
+        setError(&quot;&quot;);
+
+        const res = await fetch(
+          `${endpoint}${encodeURIComponent(query.trim())}`
+        );
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        const parseResult = listePersonnagesSchema.safeParse(data);
+
+        if (!parseResult.success) {
+          if (process.env.NODE_ENV !== &quot;production&quot;) {
+            console.error(&quot;Erreur Zod:&quot;, parseResult.error.format());
+          }
+          if (!cancelled) {
+            setItems([]);
+            setState(&quot;error&quot;);
+            setError(&quot;Les donn&eacute;es re&ccedil;ues du serveur sont invalides.&quot;);
+          }
+          return;
+        }
+
+        const personnages = parseResult.data.map((p, index) =&gt; ({
+          id: `${p.name}-${p.level}-${index}`,
+          ...p,
+        }));
+
+        if (!cancelled) {
+          setItems(personnages);
+          setState(&quot;success&quot;);
+        }
+      } catch (e: any) {
+        if (!cancelled) {
+          setItems([]);
+          setState(&quot;error&quot;);
+          setError(e?.message ?? &quot;Une erreur est survenue.&quot;);
+        }
+      }
+    }
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

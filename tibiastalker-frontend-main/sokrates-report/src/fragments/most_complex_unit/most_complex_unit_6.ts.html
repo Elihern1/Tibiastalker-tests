@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>export function normalizeCharacterName()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">export function normalizeCharacterName()</h3>
+<p style="margin-top: 4px">in <i>utils/strings.ts [10:45]</i></p>
+<ul>
+    <li><b>22</b> lines of code</li>
+    <li><b>4</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="ts">
+export function normalizeCharacterName(input: string): string {
+  if (typeof input !== 'string') throw new TypeError('name must be a string');
+
+  const raw = input.trim();
+  if (raw.length === 0) throw new Error('name must not be empty');
+
+  // Autorise lettres Unicode, espace, tiret (-), apostrophe (')
+  const allowed = /^[\p{L}\s'-]+$/u;
+  if (!allowed.test(raw)) {
+    throw new Error('name contains invalid characters');
+  }
+
+  // R&eacute;duction des espaces multiples
+  const collapsed = raw.replace(/\s+/g, ' ');
+
+  // Title Case mot par mot, en g&eacute;rant les sous-parties avec '-'
+  const words = collapsed.split(' ').map((word) =&gt; {
+    return word
+      .split('-')
+      .map((part) =&gt; {
+        // tout en minuscules d'abord
+        let s = part.toLocaleLowerCase();
+
+        // majuscule sur la premi&egrave;re lettre
+        s = s.replace(/^\p{L}/u, (ch) =&gt; ch.toLocaleUpperCase());
+
+        // majuscule sur la lettre juste apr&egrave;s un apostrophe
+        s = s.replace(/'(\p{L})/gu, (_, ch: string) =&gt; `'${ch.toLocaleUpperCase()}`);
+
+        return s;
+      })
+      .join('-');
+  });
+
+  return words.join(' ');
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

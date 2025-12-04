@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>components/CharactersArrayResult.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/CharactersArrayResult.tsx (<b>53</b> lines of code) (<a href="CharactersArrayResult.tsx">raw</a>):</h3>
+<div id="editor">/* eslint-disable @typescript-eslint/no-unused-vars */
+import { format } from &quot;date-fns&quot;;
+import { useContext } from &quot;react&quot;;
+import { Accordion, Col, Container, Row } from &quot;react-bootstrap&quot;;
+
+import { SearchedCharacterNameContext } from &quot;../contexts/SearchedCharacterNameContext&quot;;
+import { PossibleInvisibleCharacterResponse } from &quot;../types/CharacterResult&quot;;
+import { toPascalCase } from &quot;../utils/stringModificator&quot;;
+
+type Props = {
+  propertyValue: PossibleInvisibleCharacterResponse[];
+  propertyName: string;
+};
+
+function CharactersArrayResult(props: Props) {
+  const startSearchingCharacter = useContext(SearchedCharacterNameContext);
+
+  return (
+    &lt;Accordion&gt;
+      &lt;Accordion.Item eventKey=&quot;0&quot; style={{ padding: 0 }}&gt;
+        &lt;Accordion.Header&gt;{props.propertyName}&lt;/Accordion.Header&gt;
+        &lt;Accordion.Body&gt;
+          &lt;Container fluid style={{ minWidth: &quot;260px&quot;, width: &quot;100%&quot;, maxWidth: &quot;800px&quot; }}&gt;
+            &lt;Row className=&quot;align-items-center&quot;&gt;
+              &lt;Col className=&quot;p-0&quot;&gt;
+                &lt;b&gt;NAME&lt;/b&gt;
+              &lt;/Col&gt;
+              &lt;Col style={{ maxWidth: &quot;30px&quot; }} className=&quot;text-center justify-content-end col-header&quot;&gt;
+                &lt;b&gt;SP&lt;/b&gt;
+              &lt;/Col&gt;
+              &lt;Col className=&quot;text-center justify-content-end col-header&quot;&gt;
+                &lt;b&gt;FMD&lt;/b&gt;
+              &lt;/Col&gt;
+              &lt;Col className=&quot;text-center justify-content-end col-header&quot;&gt;
+                &lt;b&gt;LMD&lt;/b&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+
+            {props.propertyValue.map((item, idx) =&gt; (
+              &lt;Row key={`${idx}-${item.otherCharacterName}`} className=&quot;align-items-center&quot;&gt;
+                &lt;Col
+                  xs=&quot;auto&quot;
+                  className=&quot;flex-grow-1 character-link p-0&quot;
+                  onClick={() =&gt; {
+                    startSearchingCharacter(item.otherCharacterName);
+                  }}&gt;
+                  {toPascalCase(item.otherCharacterName)}
+                &lt;/Col&gt;
+                &lt;Col style={{ minWidth: &quot;30px&quot;, maxWidth: &quot;30px&quot; }} className=&quot;text-center justify-content-end col-value&quot;&gt;
+                  {item.numberOfMatches}
+                &lt;/Col&gt;
+                &lt;Col className=&quot;text-center justify-content-end col-value&quot;&gt;{format(item.firstMatchDateOnly, &quot;yyyy-MM-dd&quot;)}&lt;/Col&gt;
+                &lt;Col className=&quot;text-center justify-content-end col-value&quot;&gt;{format(item.lastMatchDateOnly, &quot;yyyy-MM-dd&quot;)}&lt;/Col&gt;
+              &lt;/Row&gt;
+            ))}
+          &lt;/Container&gt;
+        &lt;/Accordion.Body&gt;
+      &lt;/Accordion.Item&gt;
+    &lt;/Accordion&gt;
+  );
+}
+
+export default CharactersArrayResult;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

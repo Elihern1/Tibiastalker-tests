@@ -1,0 +1,15 @@
+Path	Lines of Code
+components/BasicPropertyResult.tsx	13
+components/CharacterResult.tsx	63
+components/CharactersArrayResult.tsx	53
+components/MainContainer.tsx	95
+components/PageContainer.tsx	17
+components/PaginationResult.tsx	96
+components/PromptCharacters.tsx	19
+components/RenderError.tsx	20
+components/ResultCard.tsx	69
+components/ResultsList.tsx	86
+components/SearchBox.tsx	65
+components/SimilarCharactersResult.tsx	60
+components/StringArrayResult.tsx	35
+components/logos/TibiaLogo2.tsx	11

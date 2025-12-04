@@ -1,0 +1,1 @@
+[ "components/__tests__/ResultCard.test.tsx", "components/__tests__/ResultsList.test.tsx", "components/__tests__/SearchBox.test.tsx", "utils/testing/levels.parseLevelRange.test.ts", "utils/testing/strings.normalizeCharacterName.test.ts", "utils/testing/url.buildCharacterUrl.test.ts" ]

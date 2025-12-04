@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>function ErrorResult()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">function ErrorResult()</h3>
+<p style="margin-top: 4px">in <i>components/RenderError.tsx [9:22]</i></p>
+<ul>
+    <li><b>14</b> lines of code</li>
+    <li><b>1</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="tsx">
+function ErrorResult(props: ErrorResponseProps) {
+  const { error } = props;
+  return (
+    &lt;Container className=&quot;d-grid mt-4&quot;&gt;
+      &lt;Row&gt;
+        &lt;Col xs=&quot;auto&quot; style={{ minWidth: &quot;320px&quot; }}&gt;
+          &lt;Alert key=&quot;danger&quot; variant=&quot;danger&quot;&gt;
+            {error.detail}
+          &lt;/Alert&gt;
+        &lt;/Col&gt;
+      &lt;/Row&gt;
+    &lt;/Container&gt;
+  );
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

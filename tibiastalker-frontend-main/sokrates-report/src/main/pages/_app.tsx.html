@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>pages/_app.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">pages/_app.tsx (<b>24</b> lines of code) (<a href="_app.tsx">raw</a>):</h3>
+<div id="editor">import &quot;bootstrap/dist/css/bootstrap.min.css&quot;;
+import &quot;../App.css&quot;;
+
+import type { AppProps } from &quot;next/app&quot;;
+import Head from &quot;next/head&quot;;
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    &lt;&gt;
+      &lt;Head&gt;
+        &lt;meta charSet=&quot;utf-8&quot; /&gt;
+        &lt;link rel=&quot;icon&quot; href=&quot;favicon.svg&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+        &lt;meta name=&quot;description&quot; content=&quot;The application allows finding all the characters of the player in the game Tibia&quot; /&gt;
+        &lt;link rel=&quot;manifest&quot; href=&quot;manifest.json&quot; /&gt;
+
+        &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;/icons/apple-touch-icon.png&quot; /&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;/icons/favicon-32x32.png&quot; /&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot; href=&quot;/icons/android-chrome-192x192.png&quot; /&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;/icons/favicon-16x16.png&quot; /&gt;
+        &lt;link rel=&quot;mask-icon&quot; href=&quot;/icons/safari-pinned-tab.svg&quot; color=&quot;#5bbad5&quot; /&gt;
+        &lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#ffffff&quot; /&gt;
+        &lt;meta name=&quot;theme-color&quot; content=&quot;#212529&quot; /&gt;
+        &lt;title&gt;Tibia Stalker&lt;/title&gt;
+      &lt;/Head&gt;
+      &lt;Component {...pageProps} /&gt;
+    &lt;/&gt;
+  );
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

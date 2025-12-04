@@ -1,0 +1,24 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Too long lines (1000+ characters)
+5 files:
+
+components/FooterContainer.tsx
+components/logos/TibiaLogo1Full.tsx
+components/logos/TibiaLogo2Full.tsx
+components/logos/TibiaLogo3Full.tsx
+logo.svg
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Typescript definition files
+path like ".*\.d\.ts"
+1 files:
+
+react-app-env.d.ts
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+

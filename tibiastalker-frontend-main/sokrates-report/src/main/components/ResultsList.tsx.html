@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>components/ResultsList.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/ResultsList.tsx (<b>86</b> lines of code) (<a href="ResultsList.tsx">raw</a>):</h3>
+<div id="editor">import React, { useEffect, useState } from &quot;react&quot;;
+import ResultCard from &quot;./ResultCard&quot;;
+import { listePersonnagesSchema, Personnage } from &quot;../schema/character&quot;;
+
+export type Character = Personnage &amp; { id: string };
+
+export interface ResultsListProps {
+  query: string;
+  endpoint: string;
+}
+
+export default function ResultsList({ query, endpoint }: ResultsListProps) {
+  const [items, setItems] = useState&lt;Character[]&gt;([]);
+  const [state, setState] = useState&lt;&quot;idle&quot; | &quot;loading&quot; | &quot;success&quot; | &quot;error&quot;&gt;(
+    &quot;idle&quot;
+  );
+  const [error, setError] = useState&lt;string&gt;(&quot;&quot;);
+
+  useEffect(() =&gt; {
+    if (!query.trim()) {
+      setItems([]);
+      setState(&quot;idle&quot;);
+      setError(&quot;&quot;);
+      return;
+    }
+
+    let cancelled = false;
+
+    async function run() {
+      try {
+        setState(&quot;loading&quot;);
+        setError(&quot;&quot;);
+
+        const res = await fetch(
+          `${endpoint}${encodeURIComponent(query.trim())}`
+        );
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        const parseResult = listePersonnagesSchema.safeParse(data);
+
+        if (!parseResult.success) {
+          if (process.env.NODE_ENV !== &quot;production&quot;) {
+            console.error(&quot;Erreur Zod:&quot;, parseResult.error.format());
+          }
+          if (!cancelled) {
+            setItems([]);
+            setState(&quot;error&quot;);
+            setError(&quot;Les donn&eacute;es re&ccedil;ues du serveur sont invalides.&quot;);
+          }
+          return;
+        }
+
+        const personnages = parseResult.data.map((p, index) =&gt; ({
+          id: `${p.name}-${p.level}-${index}`,
+          ...p,
+        }));
+
+        if (!cancelled) {
+          setItems(personnages);
+          setState(&quot;success&quot;);
+        }
+      } catch (e: any) {
+        if (!cancelled) {
+          setItems([]);
+          setState(&quot;error&quot;);
+          setError(e?.message ?? &quot;Une erreur est survenue.&quot;);
+        }
+      }
+    }
+
+    run();
+
+    return () =&gt; {
+      cancelled = true;
+    };
+  }, [query, endpoint]);
+
+  if (state === &quot;idle&quot;) return &lt;p aria-label=&quot;idle&quot; data-testid=&quot;idle&quot;&gt;Enter a query&hellip;&lt;/p&gt;;
+  if (state === &quot;loading&quot;) return &lt;p role=&quot;status&quot; data-testid=&quot;loading&quot;&gt;Loading&hellip;&lt;/p&gt;;
+  if (state === &quot;error&quot;) return &lt;p role=&quot;alert&quot; data-testid=&quot;error&quot;&gt;Error: {error}&lt;/p&gt;;
+  if (items.length === 0) return &lt;p aria-label=&quot;no-results&quot; data-testid=&quot;no-results&quot;&gt;No results&lt;/p&gt;;
+
+  return (
+    &lt;section aria-label=&quot;results&quot; data-testid=&quot;results-list&quot;&gt;
+      {items.map((c) =&gt; (
+        &lt;ResultCard
+          key={c.id}
+          name={c.name}
+          level={c.level}
+          vocation={c.vocation}
+          server={c.server}
+          href={`/characters/${encodeURIComponent(c.name)}`}
+          data-testid=&quot;result-card&quot;
+        /&gt;
+      ))}
+    &lt;/section&gt;
+  );
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

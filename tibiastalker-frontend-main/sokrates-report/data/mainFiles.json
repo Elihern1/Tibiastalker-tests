@@ -1,0 +1,358 @@
+[ {
+  "relativePath" : "App.css",
+  "extension" : "css",
+  "linesOfCode" : 78,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/BasicPropertyResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 13,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/CharacterResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 63,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 7,
+  "linesOfCodeInUnits" : 53
+}, {
+  "relativePath" : "components/CharactersArrayResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 53,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/logos/TibiaLogo2.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 11,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 7
+}, {
+  "relativePath" : "components/MainContainer.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 95,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/PageContainer.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 17,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/PaginationResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 96,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 10,
+  "linesOfCodeInUnits" : 88
+}, {
+  "relativePath" : "components/PromptCharacters.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 19,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 2,
+  "linesOfCodeInUnits" : 17
+}, {
+  "relativePath" : "components/RenderError.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 20,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 14
+}, {
+  "relativePath" : "components/ResultCard.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 69,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 12,
+  "linesOfCodeInUnits" : 59
+}, {
+  "relativePath" : "components/ResultsList.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 86,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 14,
+  "linesOfCodeInUnits" : 78
+}, {
+  "relativePath" : "components/SearchBox.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 65,
+  "unitsCount" : 3,
+  "unitsMcCabeIndexSum" : 7,
+  "linesOfCodeInUnits" : 57
+}, {
+  "relativePath" : "components/SimilarCharactersResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 60,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "components/StringArrayResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 35,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 2,
+  "linesOfCodeInUnits" : 26
+}, {
+  "relativePath" : "constants/api.ts",
+  "extension" : "ts",
+  "linesOfCode" : 4,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "contexts/SearchedCharacterNameContext.ts",
+  "extension" : "ts",
+  "linesOfCode" : 5,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "contexts/SimilarCharactersCurrentPageContext.ts",
+  "extension" : "ts",
+  "linesOfCode" : 2,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/components/SearchForm/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/components/SearchForm/SearchForm.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 75,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/components/SearchForm/types.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 5,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/useCharacterSearch.ts",
+  "extension" : "ts",
+  "linesOfCode" : 43,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 3,
+  "linesOfCodeInUnits" : 40
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/fetchPromptList.ts",
+  "extension" : "ts",
+  "linesOfCode" : 31,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/types.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 2,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/usePromptList.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 27,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/CharacterSearch/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/components/TrackingCharacter/getColorByStatus.ts",
+  "extension" : "ts",
+  "linesOfCode" : 12,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/components/TrackingCharacter/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 35,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 6
+}, {
+  "relativePath" : "features/Tracking/enums.ts",
+  "extension" : "ts",
+  "linesOfCode" : 5,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/hook/useCharacterTracking.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 20,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+  "extension" : "ts",
+  "linesOfCode" : 46,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 4,
+  "linesOfCodeInUnits" : 21
+}, {
+  "relativePath" : "pages/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 14,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "pages/tracking.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 41,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "pages/_app.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 24,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "pages/_document.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 10,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "schema/character.ts",
+  "extension" : "ts",
+  "linesOfCode" : 12,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "schema/search.ts",
+  "extension" : "ts",
+  "linesOfCode" : 6,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "services/characters/characterApi.ts",
+  "extension" : "ts",
+  "linesOfCode" : 19,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 2,
+  "linesOfCodeInUnits" : 13
+}, {
+  "relativePath" : "services/characters/index.ts",
+  "extension" : "ts",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "services/realtime/liveCommunication.ts",
+  "extension" : "ts",
+  "linesOfCode" : 24,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 3,
+  "linesOfCodeInUnits" : 11
+}, {
+  "relativePath" : "setupTests.ts",
+  "extension" : "ts",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "types/CharacterResult.ts",
+  "extension" : "ts",
+  "linesOfCode" : 29,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "types/StartSearchingCharacter.ts",
+  "extension" : "ts",
+  "linesOfCode" : 2,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "utils/constants.ts",
+  "extension" : "ts",
+  "linesOfCode" : 1,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "utils/levels.ts",
+  "extension" : "ts",
+  "linesOfCode" : 17,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "utils/stringModificator.ts",
+  "extension" : "ts",
+  "linesOfCode" : 6,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 5
+}, {
+  "relativePath" : "utils/strings.ts",
+  "extension" : "ts",
+  "linesOfCode" : 22,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 4,
+  "linesOfCodeInUnits" : 22
+}, {
+  "relativePath" : "utils/url.ts",
+  "extension" : "ts",
+  "linesOfCode" : 13,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 3
+} ]

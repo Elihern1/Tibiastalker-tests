@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>components/SimilarCharactersResult.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/SimilarCharactersResult.tsx (<b>60</b> lines of code) (<a href="SimilarCharactersResult.tsx">raw</a>):</h3>
+<div id="editor">/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useContext } from &quot;react&quot;;
+import { Col, Container, Row, Table } from &quot;react-bootstrap&quot;;
+
+import { SearchedCharacterNameContext } from &quot;../contexts/SearchedCharacterNameContext&quot;;
+import { SimilarCharactersCurrentPageContext } from &quot;../contexts/SimilarCharactersCurrentPageContext&quot;;
+import { SimilarCharactersResponse } from &quot;../types/CharacterResult&quot;;
+import { toPascalCase } from &quot;../utils/stringModificator&quot;;
+import PaginationResult from &quot;./PaginationResult&quot;;
+
+type SimilarCharactersProps = {
+  similarCharacters: SimilarCharactersResponse | null;
+};
+
+function SimilarCharactersResult(props: SimilarCharactersProps) {
+  const { similarCharacters } = props;
+
+  const startSearchingCharacter = useContext(SearchedCharacterNameContext);
+  const [currentPage, setCurrentPage] = useContext(SimilarCharactersCurrentPageContext);
+
+  // 🛡️ PROTECTION COMPL&Egrave;TE : si undefined, null, pas de names, ou names non-array &rarr; on ne rend rien
+  if (
+    !similarCharacters ||
+    !Array.isArray(similarCharacters.names) ||
+    similarCharacters.names.length === 0
+  ) {
+    return null;
+  }
+
+  const pageSize = 10;
+  const totalPages = Math.ceil(similarCharacters.totalCount / pageSize);
+
+  return (
+    &lt;Container&gt;
+      &lt;Row&gt;
+        &lt;Col
+          xs=&quot;auto&quot;
+          style={{ minWidth: &quot;320px&quot; }}
+          className=&quot;d-flex flex-column align-items-center&quot;
+        &gt;
+          &lt;Table striped bordered hover variant=&quot;dark&quot; className=&quot;text-center&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th className=&quot;bg-success&quot;&gt;
+                  &lt;i&gt;SIMILAR CHARACTERS&lt;/i&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+
+            &lt;tbody&gt;
+              {similarCharacters.names.map((name) =&gt; (
+                &lt;tr key={name}&gt;
+                  &lt;td
+                    className=&quot;character-link&quot;
+                    onClick={() =&gt; startSearchingCharacter(name)}
+                  &gt;
+                    {toPascalCase(name)}
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              ))}
+            &lt;/tbody&gt;
+          &lt;/Table&gt;
+
+          &lt;PaginationResult
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+            totalPages={totalPages}
+          /&gt;
+        &lt;/Col&gt;
+      &lt;/Row&gt;
+    &lt;/Container&gt;
+  );
+}
+
+export default SimilarCharactersResult;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

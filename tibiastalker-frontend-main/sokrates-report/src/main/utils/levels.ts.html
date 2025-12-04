@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>utils/levels.ts</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">utils/levels.ts (<b>17</b> lines of code) (<a href="levels.ts">raw</a>):</h3>
+<div id="editor">/**
+ * Analyse une cha&icirc;ne repr&eacute;sentant un intervalle de niveaux.
+ * Retourne un objet { min, max }.
+ *
+ * Exemples :
+ *   &quot;50-100&quot; &rarr; { min: 50, max: 100 }
+ *   &quot;80+&quot;    &rarr; { min: 80, max: null }
+ *   &quot;&lt;60&quot;    &rarr; { min: null, max: 60 }
+ *
+ * L&egrave;ve une erreur si le format est invalide ou si min &gt; max.
+ */
+export function parseLevelRange(input: string): { min: number | null; max: number | null } {
+  if (typeof input !== 'string') throw new TypeError('input must be a string');
+  const raw = input.trim();
+  if (!raw) throw new Error('level range cannot be empty');
+
+  const range = raw.match(/^(\d+)\s*-\s*(\d+)$/);
+  const plus = raw.match(/^(\d+)\s*\+$/);
+  const less = raw.match(/^&lt;\s*(\d+)$/);
+
+  if (range) {
+    const min = Number(range[1]);
+    const max = Number(range[2]);
+    if (min &gt; max) throw new Error('min cannot exceed max');
+    return { min, max };
+  }
+  if (plus) return { min: Number(plus[1]), max: null };
+  if (less) return { min: null, max: Number(less[1]) };
+
+  throw new Error('invalid level range format');
+}</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

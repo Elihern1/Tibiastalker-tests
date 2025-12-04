@@ -1,0 +1,307 @@
+[ {
+  "relativePath" : "App.css",
+  "extension" : "css",
+  "linesOfCode" : 78,
+  "components" : [ "primary::ROOT" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/BasicPropertyResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 13,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/CharacterResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 63,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/CharactersArrayResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 53,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/logos/TibiaLogo2.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 11,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/MainContainer.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 95,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/PageContainer.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 17,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/PaginationResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 96,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/PromptCharacters.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 19,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/RenderError.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 20,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/ResultCard.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 69,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/ResultsList.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 86,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/SearchBox.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 65,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/SimilarCharactersResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 60,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "components/StringArrayResult.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 35,
+  "components" : [ "primary::components" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "constants/api.ts",
+  "extension" : "ts",
+  "linesOfCode" : 4,
+  "components" : [ "primary::constants" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "contexts/SearchedCharacterNameContext.ts",
+  "extension" : "ts",
+  "linesOfCode" : 5,
+  "components" : [ "primary::contexts" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "contexts/SimilarCharactersCurrentPageContext.ts",
+  "extension" : "ts",
+  "linesOfCode" : 2,
+  "components" : [ "primary::contexts" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/components/SearchForm/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/components/SearchForm/SearchForm.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 75,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/components/SearchForm/types.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 5,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/useCharacterSearch.ts",
+  "extension" : "ts",
+  "linesOfCode" : 43,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/fetchPromptList.ts",
+  "extension" : "ts",
+  "linesOfCode" : 31,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/types.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 2,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/hooks/usePromptList/usePromptList.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 27,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/CharacterSearch/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/components/TrackingCharacter/getColorByStatus.ts",
+  "extension" : "ts",
+  "linesOfCode" : 12,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/components/TrackingCharacter/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 35,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/enums.ts",
+  "extension" : "ts",
+  "linesOfCode" : 5,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/hook/useCharacterTracking.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 20,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 1,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+  "extension" : "ts",
+  "linesOfCode" : 46,
+  "components" : [ "primary::features" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "pages/index.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 14,
+  "components" : [ "primary::pages" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "pages/tracking.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 41,
+  "components" : [ "primary::pages" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "pages/_app.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 24,
+  "components" : [ "primary::pages" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "pages/_document.tsx",
+  "extension" : "tsx",
+  "linesOfCode" : 10,
+  "components" : [ "primary::pages" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "schema/character.ts",
+  "extension" : "ts",
+  "linesOfCode" : 12,
+  "components" : [ "primary::schema" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "schema/search.ts",
+  "extension" : "ts",
+  "linesOfCode" : 6,
+  "components" : [ "primary::schema" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "services/characters/characterApi.ts",
+  "extension" : "ts",
+  "linesOfCode" : 19,
+  "components" : [ "primary::services" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "services/characters/index.ts",
+  "extension" : "ts",
+  "linesOfCode" : 1,
+  "components" : [ "primary::services" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "services/realtime/liveCommunication.ts",
+  "extension" : "ts",
+  "linesOfCode" : 24,
+  "components" : [ "primary::services" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "setupTests.ts",
+  "extension" : "ts",
+  "linesOfCode" : 1,
+  "components" : [ "primary::ROOT" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "types/CharacterResult.ts",
+  "extension" : "ts",
+  "linesOfCode" : 29,
+  "components" : [ "primary::types" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "types/StartSearchingCharacter.ts",
+  "extension" : "ts",
+  "linesOfCode" : 2,
+  "components" : [ "primary::types" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "utils/constants.ts",
+  "extension" : "ts",
+  "linesOfCode" : 1,
+  "components" : [ "primary::utils" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "utils/levels.ts",
+  "extension" : "ts",
+  "linesOfCode" : 17,
+  "components" : [ "primary::utils" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "utils/stringModificator.ts",
+  "extension" : "ts",
+  "linesOfCode" : 6,
+  "components" : [ "primary::utils" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "utils/strings.ts",
+  "extension" : "ts",
+  "linesOfCode" : 22,
+  "components" : [ "primary::utils" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "utils/url.ts",
+  "extension" : "ts",
+  "linesOfCode" : 13,
+  "components" : [ "primary::utils" ],
+  "concerns" : [ "::Unclassified" ]
+} ]

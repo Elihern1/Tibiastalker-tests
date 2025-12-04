@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>components/PaginationResult.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">components/PaginationResult.tsx (<b>96</b> lines of code) (<a href="PaginationResult.tsx">raw</a>):</h3>
+<div id="editor">import { useEffect, useState } from &quot;react&quot;;
+import { Form, Pagination } from &quot;react-bootstrap&quot;;
+
+type TotalCountProps = {
+  setCurrentPage: React.Dispatch&lt;React.SetStateAction&lt;number&gt;&gt;;
+  currentPage: number;
+  totalPages: number;
+};
+
+function PaginationResult(props: TotalCountProps) {
+  const { setCurrentPage, currentPage, totalPages } = props;
+  const [inputValue, setInputValue] = useState&lt;string&gt;(`${currentPage}`);
+
+  const handleInputChange = (value: string) =&gt; {
+    if (/^\d+$/.test(value) || value === &quot;&quot;) {
+      setInputValue(value);
+    }
+  };
+  useEffect(
+    function synchronizeCurrentPageAndInput() {
+      setInputValue(`${currentPage}`);
+    },
+    [currentPage],
+  );
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === totalPages;
+  const goToFirstPage = () =&gt; {
+    setCurrentPage(1);
+  };
+  const goToPrevPage = () =&gt; {
+    if (currentPage &lt;= 1) {
+      return;
+    }
+
+    setCurrentPage(currentPage - 1);
+  };
+  const goToNextPage = () =&gt; {
+    if (currentPage &gt;= totalPages) {
+      return;
+    }
+
+    setCurrentPage(currentPage + 1);
+  };
+  const goToLastPage = () =&gt; {
+    setCurrentPage(totalPages);
+  };
+
+  return (
+    &lt;Pagination&gt;
+      &lt;Pagination.First onClick={goToFirstPage} disabled={isFirstPage} /&gt;
+      &lt;Pagination.Prev onClick={goToPrevPage} disabled={isFirstPage} /&gt;
+
+      &lt;div style={{ display: &quot;flex&quot;, gap: &quot;4px&quot;, margin: &quot;0px 8px&quot; }}&gt;
+        &lt;Form.Control
+          style={{
+            display: &quot;inline-block&quot;,
+            width: &quot;45px&quot;,
+            textAlign: &quot;center&quot;,
+          }}
+          size=&quot;sm&quot;
+          type=&quot;text&quot;
+          value={inputValue}
+          onChange={event =&gt; {
+            handleInputChange(event.currentTarget.value);
+          }}
+          onBlur={event =&gt; {
+            const numericValue = parseInt(event.currentTarget.value, 10);
+
+            if (numericValue &lt; 1 || Number.isNaN(numericValue)) {
+              setCurrentPage(1);
+              setInputValue(&quot;1&quot;);
+              return;
+            }
+
+            if (numericValue &gt; totalPages) {
+              setCurrentPage(totalPages);
+              setInputValue(`${totalPages}`);
+              return;
+            }
+
+            setCurrentPage(numericValue);
+          }}
+          onKeyDown={event =&gt; {
+            if (event.key === &quot;Enter&quot;) {
+              event.currentTarget.blur();
+            }
+          }}
+        /&gt;
+        &lt;Form.Control
+          style={{
+            display: &quot;inline-block&quot;,
+            width: &quot;70px&quot;,
+            textAlign: &quot;center&quot;,
+          }}
+          size=&quot;sm&quot;
+          type=&quot;text&quot;
+          value={`of ${totalPages}`}
+          disabled
+        /&gt;
+      &lt;/div&gt;
+      &lt;Pagination.Next onClick={goToNextPage} disabled={isLastPage} /&gt;
+      &lt;Pagination.Last onClick={goToLastPage} disabled={isLastPage} /&gt;
+    &lt;/Pagination&gt;
+  );
+}
+
+export default PaginationResult;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

@@ -2,11 +2,16 @@ type Props = {
   size: number;
 };
 
-function TibiaLogo1(props: Props) {
+function TibiaLogo1({ size }: Props) {
   return (
-    <div style={{ width: props.size, height: "auto" }}>
-      <img src="./logo/logo2.svg" alt="" style={{ maxWidth: props.size }} />
-    </div>
+    <img
+      src="/logo/logo2.svg"
+      alt="Tibia Logo"
+      width={size}
+      height={size}
+      loading="lazy"  
+      style={{ display: "block" }}
+    />
   );
 }
 

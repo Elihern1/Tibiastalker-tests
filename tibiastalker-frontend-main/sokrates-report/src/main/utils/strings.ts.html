@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>utils/strings.ts</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">utils/strings.ts (<b>22</b> lines of code) (<a href="strings.ts">raw</a>):</h3>
+<div id="editor">/**
+ * Normalise un nom de personnage Tibia :
+ * - trim d&eacute;but/fin
+ * - remplace espaces multiples par un seul
+ * - conserve accents
+ * - Title Case par mot (+ apr&egrave;s apostrophe)
+ * - autorise lettres unicode, espace, tiret (-) et apostrophe (')
+ * - l&egrave;ve une erreur si vide ou si caract&egrave;res non autoris&eacute;s
+ */
+export function normalizeCharacterName(input: string): string {
+  if (typeof input !== 'string') throw new TypeError('name must be a string');
+
+  const raw = input.trim();
+  if (raw.length === 0) throw new Error('name must not be empty');
+
+  // Autorise lettres Unicode, espace, tiret (-), apostrophe (')
+  const allowed = /^[\p{L}\s'-]+$/u;
+  if (!allowed.test(raw)) {
+    throw new Error('name contains invalid characters');
+  }
+
+  // R&eacute;duction des espaces multiples
+  const collapsed = raw.replace(/\s+/g, ' ');
+
+  // Title Case mot par mot, en g&eacute;rant les sous-parties avec '-'
+  const words = collapsed.split(' ').map((word) =&gt; {
+    return word
+      .split('-')
+      .map((part) =&gt; {
+        // tout en minuscules d'abord
+        let s = part.toLocaleLowerCase();
+
+        // majuscule sur la premi&egrave;re lettre
+        s = s.replace(/^\p{L}/u, (ch) =&gt; ch.toLocaleUpperCase());
+
+        // majuscule sur la lettre juste apr&egrave;s un apostrophe
+        s = s.replace(/'(\p{L})/gu, (_, ch: string) =&gt; `'${ch.toLocaleUpperCase()}`);
+
+        return s;
+      })
+      .join('-');
+  });
+
+  return words.join(' ');
+}</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

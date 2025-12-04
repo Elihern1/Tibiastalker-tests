@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>pages/tracking.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">pages/tracking.tsx (<b>41</b> lines of code) (<a href="tracking.tsx">raw</a>):</h3>
+<div id="editor">import { KeyboardEventHandler, useState } from &quot;react&quot;;
+
+import { TrackingCharacter } from &quot;../features/Tracking&quot;;
+
+const Tracking = () =&gt; {
+  const [characterList, setCharacterList] = useState&lt;string[]&gt;([]);
+
+  const addCharacter: KeyboardEventHandler&lt;HTMLInputElement&gt; = event =&gt; {
+    if (event.key === &quot;Enter&quot; &amp;&amp; &quot;value&quot; in event.target &amp;&amp; typeof event.target.value === &quot;string&quot;) {
+      const characterName: string = event.target.value;
+      setCharacterList(currentList =&gt; [...currentList, characterName]);
+      event.target.value = &quot;&quot;;
+    }
+  };
+
+  const removeCharacter = (name: string) =&gt; () =&gt; {
+    setCharacterList(currentList =&gt; currentList.filter(characterOnList =&gt; characterOnList !== name));
+  };
+
+  return (
+    &lt;div style={{ padding: &quot;8px&quot; }}&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Manage tracking characters list&lt;/h2&gt;
+        &lt;div&gt;
+          &lt;input placeholder=&quot;write name&quot; onKeyDown={addCharacter} /&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;current tracking list:&lt;/h3&gt;
+        &lt;div&gt;
+          {characterList.map(character =&gt; (
+            &lt;span key={character} onClick={removeCharacter(character)}&gt;
+              {character} x
+            &lt;/span&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section&gt;
+        &lt;h2&gt;List of tracking&lt;/h2&gt;
+
+        &lt;ul&gt;
+          {characterList.map(character =&gt; (
+            &lt;li key={character}&gt;
+              &lt;TrackingCharacter characterName={character} /&gt;
+            &lt;/li&gt;
+          ))}
+        &lt;/ul&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Tracking;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

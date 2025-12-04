@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>function CharacterResult()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">function CharacterResult()</h3>
+<p style="margin-top: 4px">in <i>components/CharacterResult.tsx [13:72]</i></p>
+<ul>
+    <li><b>53</b> lines of code</li>
+    <li><b>7</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="tsx">
+function CharacterResult({ character }: Props) {
+  const {
+    name,
+    world,
+    vocation,
+    level,
+    lastLogin,
+    formerNames = [],
+    formerWorlds = [],
+    traded,
+    otherVisibleCharacters = [],
+    possibleInvisibleCharacters = [],
+  } = character;
+
+  return (
+    &lt;div className=&quot;d-grid mt-1&quot;&gt;
+      &lt;CharacterBasicProperty
+        propertyName=&quot;Name&quot;
+        propertyValue={`${name} ${traded ? &quot;(traded)&quot; : &quot;&quot;}`}
+      /&gt;
+
+      &lt;CharacterBasicProperty propertyName=&quot;World&quot; propertyValue={world} /&gt;
+      &lt;CharacterBasicProperty propertyName=&quot;Vocation&quot; propertyValue={vocation} /&gt;
+      &lt;CharacterBasicProperty propertyName=&quot;Level&quot; propertyValue={level} /&gt;
+
+      {/* Protection pour &eacute;viter une erreur si lastLogin = null */}
+      &lt;CharacterBasicProperty
+        propertyName=&quot;Last Login&quot;
+        propertyValue={
+          lastLogin
+            ? format(new Date(lastLogin), &quot;dd.MM.yyyy HH:mm:ss&quot;)
+            : &quot;Unknown&quot;
+        }
+      /&gt;
+
+      {formerNames.length &gt; 0 &amp;&amp; (
+        &lt;StringArrayResult headerName=&quot;Former Names&quot; propertyValue={formerNames} /&gt;
+      )}
+
+      {formerWorlds.length &gt; 0 &amp;&amp; (
+        &lt;StringArrayResult headerName=&quot;Former Worlds&quot; propertyValue={formerWorlds} /&gt;
+      )}
+
+      {otherVisibleCharacters.length &gt; 0 &amp;&amp; (
+        &lt;StringArrayResult
+          headerName=&quot;Other Visible Characters&quot;
+          propertyValue={otherVisibleCharacters}
+          isCharacterName
+        /&gt;
+      )}
+
+      {possibleInvisibleCharacters.length &gt; 0 &amp;&amp; (
+        &lt;CharactersArrayResult
+          propertyName=&quot;Possible Other Characters&quot;
+          propertyValue={possibleInvisibleCharacters}
+        /&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

@@ -1,0 +1,80 @@
+Start of analysis
+Found 65 files
+51 are in the main's scope  (1339 lines of code)
+  *.tsx: 29 files, (960 lines of code)
+  *.ts: 21 files, (301 lines of code)
+  *.css: 1 files, (78 lines of code)
+6 are in the test's scope  (234 lines of code)
+  *.tsx: 3 files, (155 lines of code)
+  *.ts: 3 files, (79 lines of code)
+0 are in the generated's scope  (0 lines of code)
+0 are in the build and deployment's scope  (0 lines of code)
+2 are in the other's scope  (10 lines of code)
+  *.md: 2 files, (10 lines of code)
+Excluded from analyses 6 files
+Analysing dependencies...
+2 are in the DECOMPOSITION_primary\ROOT's scope  (79 lines of code)
+  *.css: 1 files, (78 lines of code)
+  *.ts: 1 files, (1 lines of code)
+14 are in the DECOMPOSITION_primary\components's scope  (702 lines of code)
+  *.tsx: 14 files, (702 lines of code)
+1 are in the DECOMPOSITION_primary\constants's scope  (4 lines of code)
+  *.ts: 1 files, (4 lines of code)
+2 are in the DECOMPOSITION_primary\contexts's scope  (7 lines of code)
+  *.ts: 2 files, (7 lines of code)
+16 are in the DECOMPOSITION_primary\features's scope  (306 lines of code)
+  *.tsx: 11 files, (169 lines of code)
+  *.ts: 5 files, (137 lines of code)
+4 are in the DECOMPOSITION_primary\pages's scope  (89 lines of code)
+  *.tsx: 4 files, (89 lines of code)
+2 are in the DECOMPOSITION_primary\schema's scope  (18 lines of code)
+  *.ts: 2 files, (18 lines of code)
+3 are in the DECOMPOSITION_primary\services's scope  (44 lines of code)
+  *.ts: 3 files, (44 lines of code)
+2 are in the DECOMPOSITION_primary\types's scope  (31 lines of code)
+  *.ts: 2 files, (31 lines of code)
+5 are in the DECOMPOSITION_primary\utils's scope  (59 lines of code)
+  *.ts: 5 files, (59 lines of code)
+  - "primary", found 0 dependencies (0 component dependencies)
+0 are in the CONCERN_general\TODOs's scope  (0 lines of code)
+51 are in the CONCERN_general\Unclassified's scope  (1339 lines of code)
+  *.tsx: 29 files, (960 lines of code)
+  *.ts: 21 files, (301 lines of code)
+  *.css: 1 files, (78 lines of code)
+Analysing units...
+Basic unit metrics...
+  - found 24 units (520 lines of code in units)
+Unit size 57 / 68 / 203 / 192 / 0
+Unit size per component:
+Unit Size Component components: 20 / 46 / 141 / 192 / 0
+Unit Size Component features: 16 / 11 / 40 / 0 / 0
+Unit Size Component services: 13 / 11 / 0 / 0 / 0
+Unit Size Component utils: 8 / 0 / 22 / 0 / 0
+Unit size per extension:
+Unit Size Extension tsx: 26 / 46 / 141 / 192 / 0
+Unit Size Extension ts: 31 / 22 / 62 / 0 / 0
+Conditional complexity: 250 / 270 / 0 / 0 / 0
+Conditional complexity per component:
+Conditional Complexity Component components 129 / 270 / 0 / 0 / 0
+Conditional Complexity Component features 67 / 0 / 0 / 0 / 0
+Conditional Complexity Component services 24 / 0 / 0 / 0 / 0
+Conditional Complexity Component utils 30 / 0 / 0 / 0 / 0
+Conditional complexity per extension:
+Conditional Complexity Component tsx: 135 / 270 / 0 / 0 / 0
+Conditional Complexity Component ts: 115 / 0 / 0 / 0 / 0
+Analysing duplication...
+  - found 0 duplicates (0 duplicated lines vs. 1185 cleaned lines) in 0 files
+  - per component:primary
+     - "ROOT": 0 duplicated lines vs. 79 total lines
+     - "components": 0 duplicated lines vs. 616 total lines
+     - "constants": 0 duplicated lines vs. 4 total lines
+     - "contexts": 0 duplicated lines vs. 4 total lines
+     - "features": 0 duplicated lines vs. 271 total lines
+     - "pages": 0 duplicated lines vs. 77 total lines
+     - "schema": 0 duplicated lines vs. 16 total lines
+     - "services": 0 duplicated lines vs. 35 total lines
+     - "types": 0 duplicated lines vs. 31 total lines
+     - "utils": 0 duplicated lines vs. 52 total lines
+  - per extension:
+Total analysis time: .35s
+

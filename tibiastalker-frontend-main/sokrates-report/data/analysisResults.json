@@ -1,0 +1,4626 @@
+{
+  "metadata" : {
+    "name" : "Tibiastalker",
+    "description" : "Frontend",
+    "tooltip" : "",
+    "logoLink" : "",
+    "links" : [ ]
+  },
+  "metricsList" : {
+    "metrics" : [ {
+      "id" : "TOTAL_NUMBER_OF_FILES",
+      "value" : 65,
+      "description" : "Total number of files in the source folder"
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN",
+      "value" : 51,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN",
+      "value" : 1339,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_TSX",
+      "value" : 29,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_TSX",
+      "value" : 960,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_TS",
+      "value" : 21,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_TS",
+      "value" : 301,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_CSS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_CSS",
+      "value" : 78,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_TEST",
+      "value" : 6,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_TEST",
+      "value" : 234,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_TEST_EXT_TSX",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_TEST_EXT_TSX",
+      "value" : 155,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_TEST_EXT_TS",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_TEST_EXT_TS",
+      "value" : 79,
+      "description" : null
+    }, {
+      "id" : "TEST_VS_MAIN_LINES_OF_CODE_PERCENTAGE",
+      "value" : 17.47,
+      "description" : "Test / main code ratio"
+    }, {
+      "id" : "NUMBER_OF_FILES_GENERATED",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_GENERATED",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_BUILD_AND_DEPLOYMENT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_BUILD_AND_DEPLOYMENT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER",
+      "value" : 10,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_MD",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_MD",
+      "value" : 10,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_ROOT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_ROOT",
+      "value" : 79,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_ROOT_EXT_CSS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_ROOT_EXT_CSS",
+      "value" : 78,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_ROOT_EXT_TS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_ROOT_EXT_TS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_COMPONENTS",
+      "value" : 14,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_COMPONENTS",
+      "value" : 702,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_COMPONENTS_EXT_TSX",
+      "value" : 14,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_COMPONENTS_EXT_TSX",
+      "value" : 702,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_CONSTANTS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_CONSTANTS",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_CONSTANTS_EXT_TS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_CONSTANTS_EXT_TS",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_CONTEXTS",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_CONTEXTS",
+      "value" : 7,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_CONTEXTS_EXT_TS",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_CONTEXTS_EXT_TS",
+      "value" : 7,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FEATURES",
+      "value" : 16,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FEATURES",
+      "value" : 306,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FEATURES_EXT_TSX",
+      "value" : 11,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FEATURES_EXT_TSX",
+      "value" : 169,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FEATURES_EXT_TS",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FEATURES_EXT_TS",
+      "value" : 137,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_PAGES",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_PAGES",
+      "value" : 89,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_PAGES_EXT_TSX",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_PAGES_EXT_TSX",
+      "value" : 89,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_SCHEMA",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_SCHEMA",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_SCHEMA_EXT_TS",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_SCHEMA_EXT_TS",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_SERVICES",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_SERVICES",
+      "value" : 44,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_SERVICES_EXT_TS",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_SERVICES_EXT_TS",
+      "value" : 44,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_TYPES",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_TYPES",
+      "value" : 31,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_TYPES_EXT_TS",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_TYPES_EXT_TS",
+      "value" : 31,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_UTILS",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_UTILS",
+      "value" : 59,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_UTILS_EXT_TS",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_UTILS_EXT_TS",
+      "value" : 59,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_DEPENDENCY_LINKS_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : "Number of anchor dependencies"
+    }, {
+      "id" : "NUMBER_OF_DEPENDENCIES_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_PLACES_WITH_CYCLIC_DEPENDENCIES_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_TODOS",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_TODOS",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED",
+      "value" : 51,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED",
+      "value" : 1339,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_TSX",
+      "value" : 29,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_TSX",
+      "value" : 960,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_TS",
+      "value" : 21,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_TS",
+      "value" : 301,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_CSS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_CSS",
+      "value" : 78,
+      "description" : null
+    }, {
+      "id" : "NEGLIGIBLE_RISK_FILE_SIZE_COUNT",
+      "value" : 51,
+      "description" : "Number of  files with 100 or less lines of code"
+    }, {
+      "id" : "LOW_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with 100 to 200 lines of code"
+    }, {
+      "id" : "MEDIUM_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with 200 to 500 lines of code"
+    }, {
+      "id" : "HIGH_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with 500 to 1000 lines of code"
+    }, {
+      "id" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with more than 1000 lines of code"
+    }, {
+      "id" : "NEGLIGIBLE_RISK_FILE_SIZE_LOC",
+      "value" : 1339,
+      "description" : "Lines of code in  files with 100 or less lines of code"
+    }, {
+      "id" : "LOW_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with 100 to 200 lines of code"
+    }, {
+      "id" : "MEDIUM_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with 200 to 500 lines of code"
+    }, {
+      "id" : "HIGH_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with 500 to 1000 lines of code"
+    }, {
+      "id" : "VERY_HIGH_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with more than 1000 lines of code"
+    }, {
+      "id" : "NUMBER_OF_UNITS",
+      "value" : 24,
+      "description" : "Number of units"
+    }, {
+      "id" : "LINES_OF_CODE_IN_UNITS",
+      "value" : 520,
+      "description" : "Lines of code in units"
+    }, {
+      "id" : "LINES_OF_CODE_OUTSIDE_UNITS",
+      "value" : 819,
+      "description" : "Lines of code in units"
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_LOC",
+      "value" : 57,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 10.961538461538462,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_COUNT",
+      "value" : 10,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_LOC",
+      "value" : 68,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_PERCENTAGE",
+      "value" : 13.076923076923077,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_LOC",
+      "value" : 203,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_PERCENTAGE",
+      "value" : 39.03846153846154,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_COUNT",
+      "value" : 6,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_LOC",
+      "value" : 192,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_PERCENTAGE",
+      "value" : 36.92307692307692,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_NEGLIGIBLE_RISK_LOC",
+      "value" : 20,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 5.012531328320802,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_LOW_RISK_LOC",
+      "value" : 46,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_LOW_RISK_PERCENTAGE",
+      "value" : 11.528822055137844,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_LOW_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_MEDIUM_RISK_LOC",
+      "value" : 141,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 35.338345864661655,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_MEDIUM_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_HIGH_RISK_LOC",
+      "value" : 192,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_HIGH_RISK_PERCENTAGE",
+      "value" : 48.1203007518797,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_HIGH_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_COMPONENTS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_NEGLIGIBLE_RISK_LOC",
+      "value" : 16,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 23.880597014925375,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_NEGLIGIBLE_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_LOW_RISK_LOC",
+      "value" : 11,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_LOW_RISK_PERCENTAGE",
+      "value" : 16.417910447761194,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_LOW_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_MEDIUM_RISK_LOC",
+      "value" : 40,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_MEDIUM_RISK_PERCENTAGE",
+      "value" : 59.701492537313435,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_MEDIUM_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FEATURES_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_NEGLIGIBLE_RISK_LOC",
+      "value" : 13,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 54.166666666666664,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_NEGLIGIBLE_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_LOW_RISK_LOC",
+      "value" : 11,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_LOW_RISK_PERCENTAGE",
+      "value" : 45.833333333333336,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_LOW_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_SERVICES_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_NEGLIGIBLE_RISK_LOC",
+      "value" : 8,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 26.666666666666668,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_MEDIUM_RISK_LOC",
+      "value" : 22,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 73.33333333333333,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_MEDIUM_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_UTILS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_NEGLIGIBLE_RISK_LOC",
+      "value" : 26,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 6.419753086419753,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_NEGLIGIBLE_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_LOW_RISK_LOC",
+      "value" : 46,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_LOW_RISK_PERCENTAGE",
+      "value" : 11.358024691358025,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_LOW_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_MEDIUM_RISK_LOC",
+      "value" : 141,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_MEDIUM_RISK_PERCENTAGE",
+      "value" : 34.81481481481482,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_MEDIUM_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_HIGH_RISK_LOC",
+      "value" : 192,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_HIGH_RISK_PERCENTAGE",
+      "value" : 47.407407407407405,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_HIGH_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TSX_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_NEGLIGIBLE_RISK_LOC",
+      "value" : 31,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 26.956521739130434,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_LOW_RISK_LOC",
+      "value" : 22,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_LOW_RISK_PERCENTAGE",
+      "value" : 19.130434782608695,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_LOW_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_MEDIUM_RISK_LOC",
+      "value" : 62,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 53.91304347826087,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_MEDIUM_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_TS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_LOC",
+      "value" : 250,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 48.07692307692308,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_COUNT",
+      "value" : 19,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_LOC",
+      "value" : 270,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_PERCENTAGE",
+      "value" : 51.92307692307692,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_PLUS_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_PLUS_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_NEGLIGIBLE_RISK_LOC",
+      "value" : 129,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 32.330827067669176,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 9,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_LOW_RISK_LOC",
+      "value" : 270,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_LOW_RISK_PERCENTAGE",
+      "value" : 67.66917293233082,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_LOW_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_COMPONENTS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_NEGLIGIBLE_RISK_LOC",
+      "value" : 67,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_NEGLIGIBLE_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FEATURES_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_NEGLIGIBLE_RISK_LOC",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_NEGLIGIBLE_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_SERVICES_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_NEGLIGIBLE_RISK_LOC",
+      "value" : 30,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_UTILS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_NEGLIGIBLE_RISK_LOC",
+      "value" : 135,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 33.333333333333336,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_NEGLIGIBLE_RISK_COUNT",
+      "value" : 10,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_LOW_RISK_LOC",
+      "value" : 270,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_LOW_RISK_PERCENTAGE",
+      "value" : 66.66666666666667,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_LOW_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TSX_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_NEGLIGIBLE_RISK_LOC",
+      "value" : 115,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 9,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_TS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATES",
+      "value" : 0,
+      "description" : "Number of duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_FILES_WITH_DUPLICATES",
+      "value" : 0,
+      "description" : "Number of files with duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES",
+      "value" : 1185,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE",
+      "value" : 0.0,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "UNIT_DUPLICATES_COUNT",
+      "value" : 0,
+      "description" : "Unit duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_ROOT",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_ROOT",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_ROOT",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_COMPONENTS",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_COMPONENTS",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_COMPONENTS",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_CONSTANTS",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_CONSTANTS",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_CONSTANTS",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_CONTEXTS",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_CONTEXTS",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_CONTEXTS",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_FEATURES",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_FEATURES",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_FEATURES",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_PAGES",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_PAGES",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_PAGES",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_SCHEMA",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_SCHEMA",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_SCHEMA",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_SERVICES",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_SERVICES",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_SERVICES",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_TYPES",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_TYPES",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_TYPES",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_UTILS",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_UTILS",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_UTILS",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "TOTAL_ANALYSIS_TIME_IN_MILLIS",
+      "value" : 358,
+      "description" : "Total analysis time in milliseconds"
+    } ]
+  },
+  "controlResults" : {
+    "goalsAnalysisResults" : [ {
+      "metricsWithGoal" : {
+        "goal" : "Keep the system simple and easy to change",
+        "description" : "Aim at keeping the system size modest (less than 200,000 LOC is good), duplication low (less than 5% is good), files small (no files longer than 1000 LOC is good), and units simple (no units with more than 25 decision points is good).",
+        "controls" : [ {
+          "metric" : "LINES_OF_CODE_MAIN",
+          "description" : "Total number of lines of main code",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "200000",
+            "tolerance" : "20000"
+          }
+        }, {
+          "metric" : "DUPLICATION_PERCENTAGE",
+          "description" : "System duplication",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "5",
+            "tolerance" : "1"
+          }
+        }, {
+          "metric" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "description" : "The number of very large files",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        }, {
+          "metric" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "description" : "Number of very complex units",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        } ]
+      },
+      "controlStatuses" : [ {
+        "control" : {
+          "metric" : "LINES_OF_CODE_MAIN",
+          "description" : "Total number of lines of main code",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "200000",
+            "tolerance" : "20000"
+          }
+        },
+        "metric" : {
+          "id" : "LINES_OF_CODE_MAIN",
+          "value" : 1339,
+          "description" : null
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "DUPLICATION_PERCENTAGE",
+          "description" : "System duplication",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "5",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "DUPLICATION_PERCENTAGE",
+          "value" : 0.0,
+          "description" : "Duplication percentage"
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "description" : "The number of very large files",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "value" : 0,
+          "description" : "Number of  files with more than 1000 lines of code"
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "description" : "Number of very complex units",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "value" : 0,
+          "description" : null
+        },
+        "status" : "OK"
+      } ]
+    } ]
+  },
+  "totalNumberOfFilesInScope" : 65,
+  "mainAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 51,
+    "linesOfCode" : 1339,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 29,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 21,
+      "description" : [ ]
+    }, {
+      "name" : "  *.css",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 960,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 301,
+      "description" : [ ]
+    }, {
+      "name" : "  *.css",
+      "value" : 78,
+      "description" : [ ]
+    } ]
+  },
+  "testAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 6,
+    "linesOfCode" : 234,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 3,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 3,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.tsx",
+      "value" : 155,
+      "description" : [ ]
+    }, {
+      "name" : "  *.ts",
+      "value" : 79,
+      "description" : [ ]
+    } ]
+  },
+  "generatedAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 0,
+    "linesOfCode" : 0,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ ],
+    "linesOfCodePerExtension" : [ ]
+  },
+  "buildAndDeployAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 0,
+    "linesOfCode" : 0,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ ],
+    "linesOfCodePerExtension" : [ ]
+  },
+  "otherAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 2,
+    "linesOfCode" : 10,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.md",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.md",
+      "value" : 10,
+      "description" : [ ]
+    } ]
+  },
+  "logicalDecompositionsAnalysisResults" : [ {
+    "key" : "primary",
+    "components" : [ {
+      "name" : "ROOT",
+      "filesCount" : 2,
+      "linesOfCode" : 79,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.css",
+        "value" : 1,
+        "description" : [ ]
+      }, {
+        "name" : "  *.ts",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.css",
+        "value" : 78,
+        "description" : [ ]
+      }, {
+        "name" : "  *.ts",
+        "value" : 1,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "components",
+      "filesCount" : 14,
+      "linesOfCode" : 702,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 14,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 702,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "constants",
+      "filesCount" : 1,
+      "linesOfCode" : 4,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 4,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "contexts",
+      "filesCount" : 2,
+      "linesOfCode" : 7,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 2,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 7,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "features",
+      "filesCount" : 16,
+      "linesOfCode" : 306,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 11,
+        "description" : [ ]
+      }, {
+        "name" : "  *.ts",
+        "value" : 5,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 169,
+        "description" : [ ]
+      }, {
+        "name" : "  *.ts",
+        "value" : 137,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "pages",
+      "filesCount" : 4,
+      "linesOfCode" : 89,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 4,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 89,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "schema",
+      "filesCount" : 2,
+      "linesOfCode" : 18,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 2,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 18,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "services",
+      "filesCount" : 3,
+      "linesOfCode" : 44,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 3,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 44,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "types",
+      "filesCount" : 2,
+      "linesOfCode" : 31,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 2,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 31,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "utils",
+      "filesCount" : 5,
+      "linesOfCode" : 59,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 5,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.ts",
+        "value" : 59,
+        "description" : [ ]
+      } ]
+    } ],
+    "componentDependencies" : [ ],
+    "componentDependenciesErrors" : [ ],
+    "logicalDecomposition" : {
+      "name" : "primary",
+      "scope" : "main",
+      "filters" : [ ],
+      "componentsFolderDepth" : 1,
+      "minComponentsCount" : 0,
+      "components" : [ {
+        "name" : "ROOT",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/components/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/constants/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/contexts/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/features/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/pages/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/schema/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/services/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/types/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : "src/utils/.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "components",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/components/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "constants",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/constants/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "contexts",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/contexts/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "features",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/features/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "pages",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/pages/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "schema",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/schema/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "services",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/services/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "types",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/types/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "utils",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "src/utils/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      } ],
+      "metaComponents" : [ ],
+      "groups" : [ ],
+      "includeRemainingFiles" : true,
+      "dependenciesFinder" : {
+        "useBuiltInDependencyFinders" : true,
+        "rules" : [ ],
+        "metaRules" : [ ]
+      },
+      "renderingOptions" : {
+        "orientation" : "TB",
+        "maxNumberOfDependencies" : 100,
+        "renderComponentsWithoutDependencies" : true,
+        "renderIndirectDependencies" : false,
+        "renderInternalIndirectDependencies" : false,
+        "reverseDirection" : false
+      },
+      "includeExternalComponents" : true,
+      "dependencyLinkThreshold" : 1,
+      "duplicationLinkThreshold" : 50,
+      "temporalLinkThreshold" : 1,
+      "maxSearchDepthLines" : 200
+    },
+    "linesOfCodePerComponent" : [ {
+      "name" : "ROOT",
+      "value" : 79,
+      "description" : [ ]
+    }, {
+      "name" : "components",
+      "value" : 702,
+      "description" : [ ]
+    }, {
+      "name" : "constants",
+      "value" : 4,
+      "description" : [ ]
+    }, {
+      "name" : "contexts",
+      "value" : 7,
+      "description" : [ ]
+    }, {
+      "name" : "features",
+      "value" : 306,
+      "description" : [ ]
+    }, {
+      "name" : "pages",
+      "value" : 89,
+      "description" : [ ]
+    }, {
+      "name" : "schema",
+      "value" : 18,
+      "description" : [ ]
+    }, {
+      "name" : "services",
+      "value" : 44,
+      "description" : [ ]
+    }, {
+      "name" : "types",
+      "value" : 31,
+      "description" : [ ]
+    }, {
+      "name" : "utils",
+      "value" : 59,
+      "description" : [ ]
+    } ],
+    "fileCountPerComponent" : [ {
+      "name" : "ROOT",
+      "value" : 2,
+      "description" : [ ]
+    }, {
+      "name" : "components",
+      "value" : 14,
+      "description" : [ ]
+    }, {
+      "name" : "constants",
+      "value" : 1,
+      "description" : [ ]
+    }, {
+      "name" : "contexts",
+      "value" : 2,
+      "description" : [ ]
+    }, {
+      "name" : "features",
+      "value" : 16,
+      "description" : [ ]
+    }, {
+      "name" : "pages",
+      "value" : 4,
+      "description" : [ ]
+    }, {
+      "name" : "schema",
+      "value" : 2,
+      "description" : [ ]
+    }, {
+      "name" : "services",
+      "value" : 3,
+      "description" : [ ]
+    }, {
+      "name" : "types",
+      "value" : 2,
+      "description" : [ ]
+    }, {
+      "name" : "utils",
+      "value" : 5,
+      "description" : [ ]
+    } ]
+  } ],
+  "concernsAnalysisResults" : [ {
+    "key" : "general",
+    "concerns" : [ {
+      "name" : "TODOs",
+      "filesCount" : 0,
+      "linesOfCode" : 0,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ ],
+      "linesOfCodePerExtension" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "filesCount" : 51,
+      "linesOfCode" : 1339,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 29,
+        "description" : [ ]
+      }, {
+        "name" : "  *.ts",
+        "value" : 21,
+        "description" : [ ]
+      }, {
+        "name" : "  *.css",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.tsx",
+        "value" : 960,
+        "description" : [ ]
+      }, {
+        "name" : "  *.ts",
+        "value" : 301,
+        "description" : [ ]
+      }, {
+        "name" : "  *.css",
+        "value" : 78,
+        "description" : [ ]
+      } ]
+    } ],
+    "concernsGroup" : null,
+    "fileCountPerConcern" : [ {
+      "name" : "TODOs",
+      "value" : 0,
+      "description" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "value" : 51,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerConcern" : [ {
+      "name" : "TODOs",
+      "value" : 0,
+      "description" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "value" : 1339,
+      "description" : [ ]
+    } ]
+  } ],
+  "foundTags" : [ ],
+  "filesAnalysisResults" : {
+    "overallFileSizeDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 1339,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 51,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 51,
+      "totalValue" : 1339
+    },
+    "fileSizeDistributionPerExtension" : [ {
+      "key" : "css",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 78,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 1,
+      "totalValue" : 78
+    }, {
+      "key" : "tsx",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 960,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 29,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 29,
+      "totalValue" : 960
+    }, {
+      "key" : "ts",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 301,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 21,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 21,
+      "totalValue" : 301
+    } ],
+    "fileSizeDistributionPerLogicalDecomposition" : [ {
+      "name" : "primary",
+      "fileSizeDistributionPerComponent" : [ {
+        "key" : "ROOT",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 79,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 2,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 2,
+        "totalValue" : 79
+      }, {
+        "key" : "components",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 702,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 14,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 14,
+        "totalValue" : 702
+      }, {
+        "key" : "constants",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 4,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 1,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 1,
+        "totalValue" : 4
+      }, {
+        "key" : "contexts",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 7,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 2,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 2,
+        "totalValue" : 7
+      }, {
+        "key" : "features",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 306,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 16,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 16,
+        "totalValue" : 306
+      }, {
+        "key" : "pages",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 89,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 4,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 4,
+        "totalValue" : 89
+      }, {
+        "key" : "schema",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 18,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 2,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 2,
+        "totalValue" : 18
+      }, {
+        "key" : "services",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 44,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 3,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 3,
+        "totalValue" : 44
+      }, {
+        "key" : "types",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 31,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 2,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 2,
+        "totalValue" : 31
+      }, {
+        "key" : "utils",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 59,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 5,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "veryHighRiskPercentage" : 0.0,
+        "mediumRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0,
+        "lowRiskPercentage" : 0.0,
+        "totalCount" : 5,
+        "totalValue" : 59
+      } ]
+    } ],
+    "longestFiles" : [ {
+      "relativePath" : "components/PaginationResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 96,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 10,
+      "linesOfCodeInUnits" : 88
+    }, {
+      "relativePath" : "components/MainContainer.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 95,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/ResultsList.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 86,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 14,
+      "linesOfCodeInUnits" : 78
+    }, {
+      "relativePath" : "App.css",
+      "extension" : "css",
+      "linesOfCode" : 78,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/components/SearchForm/SearchForm.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 75,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/ResultCard.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 69,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 12,
+      "linesOfCodeInUnits" : 59
+    }, {
+      "relativePath" : "components/SearchBox.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 65,
+      "unitsCount" : 3,
+      "unitsMcCabeIndexSum" : 7,
+      "linesOfCodeInUnits" : 57
+    }, {
+      "relativePath" : "components/CharacterResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 63,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 7,
+      "linesOfCodeInUnits" : 53
+    }, {
+      "relativePath" : "components/SimilarCharactersResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 60,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/CharactersArrayResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 53,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+      "extension" : "ts",
+      "linesOfCode" : 46,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 4,
+      "linesOfCodeInUnits" : 21
+    }, {
+      "relativePath" : "features/CharacterSearch/hooks/useCharacterSearch.ts",
+      "extension" : "ts",
+      "linesOfCode" : 43,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 40
+    }, {
+      "relativePath" : "pages/tracking.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 41,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/StringArrayResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 35,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 26
+    }, {
+      "relativePath" : "features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 35,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 6
+    }, {
+      "relativePath" : "features/CharacterSearch/hooks/usePromptList/fetchPromptList.ts",
+      "extension" : "ts",
+      "linesOfCode" : 31,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "types/CharacterResult.ts",
+      "extension" : "ts",
+      "linesOfCode" : 29,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/hooks/usePromptList/usePromptList.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 27,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "pages/_app.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 24,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "services/realtime/liveCommunication.ts",
+      "extension" : "ts",
+      "linesOfCode" : 24,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 11
+    }, {
+      "relativePath" : "utils/strings.ts",
+      "extension" : "ts",
+      "linesOfCode" : 22,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 4,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "components/RenderError.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 20,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 14
+    }, {
+      "relativePath" : "features/Tracking/hook/useCharacterTracking.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 20,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/PromptCharacters.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 19,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 17
+    }, {
+      "relativePath" : "services/characters/characterApi.ts",
+      "extension" : "ts",
+      "linesOfCode" : 19,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 13
+    }, {
+      "relativePath" : "components/PageContainer.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 17,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "utils/levels.ts",
+      "extension" : "ts",
+      "linesOfCode" : 17,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "pages/index.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 14,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/BasicPropertyResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 13,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "utils/url.ts",
+      "extension" : "ts",
+      "linesOfCode" : 13,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 3
+    }, {
+      "relativePath" : "features/Tracking/components/TrackingCharacter/getColorByStatus.ts",
+      "extension" : "ts",
+      "linesOfCode" : 12,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "schema/character.ts",
+      "extension" : "ts",
+      "linesOfCode" : 12,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "components/logos/TibiaLogo2.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 11,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 7
+    }, {
+      "relativePath" : "pages/_document.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 10,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "schema/search.ts",
+      "extension" : "ts",
+      "linesOfCode" : 6,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "utils/stringModificator.ts",
+      "extension" : "ts",
+      "linesOfCode" : 6,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 5
+    }, {
+      "relativePath" : "contexts/SearchedCharacterNameContext.ts",
+      "extension" : "ts",
+      "linesOfCode" : 5,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/components/SearchForm/types.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 5,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/Tracking/enums.ts",
+      "extension" : "ts",
+      "linesOfCode" : 5,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "constants/api.ts",
+      "extension" : "ts",
+      "linesOfCode" : 4,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "contexts/SimilarCharactersCurrentPageContext.ts",
+      "extension" : "ts",
+      "linesOfCode" : 2,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/hooks/usePromptList/types.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 2,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "types/StartSearchingCharacter.ts",
+      "extension" : "ts",
+      "linesOfCode" : 2,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/components/SearchForm/index.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/hooks/usePromptList/index.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/CharacterSearch/index.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/Tracking/components/TrackingCharacter/index.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "features/Tracking/index.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "services/characters/index.ts",
+      "extension" : "ts",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "setupTests.ts",
+      "extension" : "ts",
+      "linesOfCode" : 1,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    } ],
+    "filesWithMostUnits" : [ {
+      "relativePath" : "components/SearchBox.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 65,
+      "unitsCount" : 3,
+      "unitsMcCabeIndexSum" : 7,
+      "linesOfCodeInUnits" : 57
+    }, {
+      "relativePath" : "components/PaginationResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 96,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 10,
+      "linesOfCodeInUnits" : 88
+    }, {
+      "relativePath" : "components/ResultCard.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 69,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 12,
+      "linesOfCodeInUnits" : 59
+    }, {
+      "relativePath" : "components/ResultsList.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 86,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 14,
+      "linesOfCodeInUnits" : 78
+    }, {
+      "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+      "extension" : "ts",
+      "linesOfCode" : 46,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 4,
+      "linesOfCodeInUnits" : 21
+    }, {
+      "relativePath" : "services/characters/characterApi.ts",
+      "extension" : "ts",
+      "linesOfCode" : 19,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 13
+    }, {
+      "relativePath" : "components/CharacterResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 63,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 7,
+      "linesOfCodeInUnits" : 53
+    }, {
+      "relativePath" : "components/logos/TibiaLogo2.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 11,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 7
+    }, {
+      "relativePath" : "components/PromptCharacters.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 19,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 17
+    }, {
+      "relativePath" : "components/RenderError.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 20,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 14
+    }, {
+      "relativePath" : "components/StringArrayResult.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 35,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 26
+    }, {
+      "relativePath" : "features/CharacterSearch/hooks/useCharacterSearch.ts",
+      "extension" : "ts",
+      "linesOfCode" : 43,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 40
+    }, {
+      "relativePath" : "features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx",
+      "extension" : "tsx",
+      "linesOfCode" : 35,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 6
+    }, {
+      "relativePath" : "services/realtime/liveCommunication.ts",
+      "extension" : "ts",
+      "linesOfCode" : 24,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 11
+    }, {
+      "relativePath" : "utils/stringModificator.ts",
+      "extension" : "ts",
+      "linesOfCode" : 6,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 5
+    }, {
+      "relativePath" : "utils/strings.ts",
+      "extension" : "ts",
+      "linesOfCode" : 22,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 4,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "utils/url.ts",
+      "extension" : "ts",
+      "linesOfCode" : 13,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 3
+    } ]
+  },
+  "filesHistoryAnalysisResults" : {
+    "overallFileLastModifiedDistribution" : null,
+    "overallFileFirstModifiedDistribution" : null,
+    "overallFileChangeDistribution" : null,
+    "overallContributorsCountDistribution" : null,
+    "filesWithoutCommitHistoryCount" : 0,
+    "filesWithoutCommitHistoryLinesOfCode" : 0,
+    "changeDistributionPerExtension" : [ ],
+    "lastModifiedDistributionPerExtension" : [ ],
+    "firstModifiedDistributionPerExtension" : [ ],
+    "changeDistributionPerLogicalDecomposition" : [ ],
+    "firstModifiedDistributionPerLogicalDecomposition" : [ ],
+    "lastModifiedDistributionPerLogicalDecomposition" : [ ],
+    "oldestFiles" : [ ],
+    "youngestFiles" : [ ],
+    "mostRecentlyChangedFiles" : [ ],
+    "mostPreviouslyChangedFiles" : [ ],
+    "mostChangedFiles" : [ ],
+    "filesWithMostContributors" : [ ],
+    "filesWithLeastContributors" : [ ],
+    "firstDate" : "",
+    "latestDate" : "",
+    "daysBetweenFirstAndLastDate" : 0,
+    "weeks" : 0,
+    "estimatedWorkindDays" : 0,
+    "activeDays" : 0,
+    "ageInDays" : 0,
+    "historyPerExtensionPerYear" : [ ]
+  },
+  "unitsAnalysisResults" : {
+    "totalNumberOfUnits" : 24,
+    "linesOfCodeInUnits" : 520,
+    "unitSizeRiskDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 57,
+      "lowRiskValue" : 68,
+      "mediumRiskValue" : 203,
+      "highRiskValue" : 192,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 5,
+      "negligibleRiskCount" : 10,
+      "mediumRiskCount" : 6,
+      "highRiskCount" : 3,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 39.03846153846154,
+      "highRiskPercentage" : 36.92307692307692,
+      "negligibleRiskPercentage" : 10.961538461538462,
+      "lowRiskPercentage" : 13.076923076923077,
+      "totalCount" : 24,
+      "totalValue" : 520
+    },
+    "conditionalComplexityRiskDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 250,
+      "lowRiskValue" : 270,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 5,
+      "negligibleRiskCount" : 19,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 48.07692307692308,
+      "lowRiskPercentage" : 51.92307692307692,
+      "totalCount" : 24,
+      "totalValue" : 520
+    },
+    "unitSizeRiskDistributionPerExtension" : [ {
+      "key" : "tsx",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 26,
+      "lowRiskValue" : 46,
+      "mediumRiskValue" : 141,
+      "highRiskValue" : 192,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 3,
+      "negligibleRiskCount" : 5,
+      "mediumRiskCount" : 4,
+      "highRiskCount" : 3,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 34.81481481481482,
+      "highRiskPercentage" : 47.407407407407405,
+      "negligibleRiskPercentage" : 6.419753086419753,
+      "lowRiskPercentage" : 11.358024691358025,
+      "totalCount" : 15,
+      "totalValue" : 405
+    }, {
+      "key" : "ts",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 31,
+      "lowRiskValue" : 22,
+      "mediumRiskValue" : 62,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 2,
+      "negligibleRiskCount" : 5,
+      "mediumRiskCount" : 2,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 53.91304347826087,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 26.956521739130434,
+      "lowRiskPercentage" : 19.130434782608695,
+      "totalCount" : 9,
+      "totalValue" : 115
+    } ],
+    "unitSizeRiskDistributionPerComponent" : [ [ {
+      "key" : "components",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 20,
+      "lowRiskValue" : 46,
+      "mediumRiskValue" : 141,
+      "highRiskValue" : 192,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 3,
+      "negligibleRiskCount" : 4,
+      "mediumRiskCount" : 4,
+      "highRiskCount" : 3,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 35.338345864661655,
+      "highRiskPercentage" : 48.1203007518797,
+      "negligibleRiskPercentage" : 5.012531328320802,
+      "lowRiskPercentage" : 11.528822055137844,
+      "totalCount" : 14,
+      "totalValue" : 399
+    }, {
+      "key" : "features",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 16,
+      "lowRiskValue" : 11,
+      "mediumRiskValue" : 40,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 2,
+      "mediumRiskCount" : 1,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 59.701492537313435,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 23.880597014925375,
+      "lowRiskPercentage" : 16.417910447761194,
+      "totalCount" : 4,
+      "totalValue" : 67
+    }, {
+      "key" : "services",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 13,
+      "lowRiskValue" : 11,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 2,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 54.166666666666664,
+      "lowRiskPercentage" : 45.833333333333336,
+      "totalCount" : 3,
+      "totalValue" : 24
+    }, {
+      "key" : "utils",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 8,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 22,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 2,
+      "mediumRiskCount" : 1,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 73.33333333333333,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 26.666666666666668,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 3,
+      "totalValue" : 30
+    } ] ],
+    "longestUnits" : [ {
+      "shortName" : "function PaginationResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/PaginationResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 96,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 10,
+        "linesOfCodeInUnits" : 88
+      },
+      "startLine" : 10,
+      "endLine" : 105,
+      "linesOfCode" : 85,
+      "mcCabeIndex" : 9,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "function synchronizeCurrentPageAndInput()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/PaginationResult.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 96,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 10,
+          "linesOfCodeInUnits" : 88
+        },
+        "startLine" : 20,
+        "endLine" : 22,
+        "linesOfCode" : 3,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 0,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "export default function ResultCard()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultCard.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 69,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 12,
+        "linesOfCodeInUnits" : 59
+      },
+      "startLine" : 13,
+      "endLine" : 78,
+      "linesOfCode" : 54,
+      "mcCabeIndex" : 10,
+      "numberOfParameters" : 8,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "function handleClick()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/ResultCard.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 69,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 12,
+          "linesOfCodeInUnits" : 59
+        },
+        "startLine" : 24,
+        "endLine" : 28,
+        "linesOfCode" : 5,
+        "mcCabeIndex" : 2,
+        "numberOfParameters" : 0,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "function CharacterResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/CharacterResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 63,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 53
+      },
+      "startLine" : 13,
+      "endLine" : 72,
+      "linesOfCode" : 53,
+      "mcCabeIndex" : 7,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export function useCharacterSearch()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/CharacterSearch/hooks/useCharacterSearch.ts",
+        "extension" : "ts",
+        "linesOfCode" : 43,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 40
+      },
+      "startLine" : 5,
+      "endLine" : 50,
+      "linesOfCode" : 40,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default function ResultsList()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultsList.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 86,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 14,
+        "linesOfCodeInUnits" : 78
+      },
+      "startLine" : 12,
+      "endLine" : 103,
+      "linesOfCode" : 39,
+      "mcCabeIndex" : 6,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "async function run()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/ResultsList.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 86,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 14,
+          "linesOfCodeInUnits" : 78
+        },
+        "startLine" : 29,
+        "endLine" : 74,
+        "linesOfCode" : 39,
+        "mcCabeIndex" : 8,
+        "numberOfParameters" : 0,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "async function run()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultsList.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 86,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 14,
+        "linesOfCodeInUnits" : 78
+      },
+      "startLine" : 29,
+      "endLine" : 74,
+      "linesOfCode" : 39,
+      "mcCabeIndex" : 8,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default function SearchBox()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/SearchBox.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 65,
+        "unitsCount" : 3,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 57
+      },
+      "startLine" : 11,
+      "endLine" : 76,
+      "linesOfCode" : 37,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 5,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "function handleChange()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/SearchBox.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 65,
+          "unitsCount" : 3,
+          "unitsMcCabeIndexSum" : 7,
+          "linesOfCodeInUnits" : 57
+        },
+        "startLine" : 20,
+        "endLine" : 24,
+        "linesOfCode" : 5,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      }, {
+        "shortName" : "function handleSubmit()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/SearchBox.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 65,
+          "unitsCount" : 3,
+          "unitsMcCabeIndexSum" : 7,
+          "linesOfCodeInUnits" : 57
+        },
+        "startLine" : 26,
+        "endLine" : 43,
+        "linesOfCode" : 15,
+        "mcCabeIndex" : 3,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "function StringArrayResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/StringArrayResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 35,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 26
+      },
+      "startLine" : 13,
+      "endLine" : 39,
+      "linesOfCode" : 26,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export function normalizeCharacterName()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "utils/strings.ts",
+        "extension" : "ts",
+        "linesOfCode" : 22,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 4,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 10,
+      "endLine" : 45,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 4,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function PromptResultTable()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/PromptCharacters.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 19,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 17
+      },
+      "startLine" : 3,
+      "endLine" : 21,
+      "linesOfCode" : 17,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function handleSubmit()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/SearchBox.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 65,
+        "unitsCount" : 3,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 57
+      },
+      "startLine" : 26,
+      "endLine" : 43,
+      "linesOfCode" : 15,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function ErrorResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/RenderError.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 20,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 9,
+      "endLine" : 22,
+      "linesOfCode" : 14,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "addCharacterToTracking: async()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+        "extension" : "ts",
+        "linesOfCode" : 46,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 4,
+        "linesOfCodeInUnits" : 21
+      },
+      "startLine" : 21,
+      "endLine" : 36,
+      "linesOfCode" : 11,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function startConnection()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "services/realtime/liveCommunication.ts",
+        "extension" : "ts",
+        "linesOfCode" : 24,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 11
+      },
+      "startLine" : 17,
+      "endLine" : 28,
+      "linesOfCode" : 11,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "removeCharacterFromTracking: async()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+        "extension" : "ts",
+        "linesOfCode" : 46,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 4,
+        "linesOfCodeInUnits" : 21
+      },
+      "startLine" : 38,
+      "endLine" : 50,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function fetchSimilarCharacters()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "services/characters/characterApi.ts",
+        "extension" : "ts",
+        "linesOfCode" : 19,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 13
+      },
+      "startLine" : 13,
+      "endLine" : 21,
+      "linesOfCode" : 9,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function TibiaLogo1()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/logos/TibiaLogo2.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 11,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 7
+      },
+      "startLine" : 5,
+      "endLine" : 11,
+      "linesOfCode" : 7,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "backgroundColor: getColorByStatus()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 35,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 6
+      },
+      "startLine" : 13,
+      "endLine" : 19,
+      "linesOfCode" : 6,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function handleClick()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultCard.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 69,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 12,
+        "linesOfCodeInUnits" : 59
+      },
+      "startLine" : 24,
+      "endLine" : 28,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function handleChange()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/SearchBox.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 65,
+        "unitsCount" : 3,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 57
+      },
+      "startLine" : 20,
+      "endLine" : 24,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function toPascalCase()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "utils/stringModificator.ts",
+        "extension" : "ts",
+        "linesOfCode" : 6,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 5
+      },
+      "startLine" : 1,
+      "endLine" : 5,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function fetchCharacter()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "services/characters/characterApi.ts",
+        "extension" : "ts",
+        "linesOfCode" : 19,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 13
+      },
+      "startLine" : 8,
+      "endLine" : 11,
+      "linesOfCode" : 4,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function synchronizeCurrentPageAndInput()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/PaginationResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 96,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 10,
+        "linesOfCodeInUnits" : 88
+      },
+      "startLine" : 20,
+      "endLine" : 22,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export function buildCharacterUrl()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "utils/url.ts",
+        "extension" : "ts",
+        "linesOfCode" : 13,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 3
+      },
+      "startLine" : 15,
+      "endLine" : 17,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    } ],
+    "conditionalComplexityRiskDistributionPerExtension" : [ {
+      "key" : "tsx",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 135,
+      "lowRiskValue" : 270,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 5,
+      "negligibleRiskCount" : 10,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 33.333333333333336,
+      "lowRiskPercentage" : 66.66666666666667,
+      "totalCount" : 15,
+      "totalValue" : 405
+    }, {
+      "key" : "ts",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 115,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 9,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 9,
+      "totalValue" : 115
+    } ],
+    "conditionalComplexityRiskDistributionPerComponent" : [ [ {
+      "key" : "components",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 129,
+      "lowRiskValue" : 270,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 5,
+      "negligibleRiskCount" : 9,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 32.330827067669176,
+      "lowRiskPercentage" : 67.66917293233082,
+      "totalCount" : 14,
+      "totalValue" : 399
+    }, {
+      "key" : "features",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 67,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 4,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 4,
+      "totalValue" : 67
+    }, {
+      "key" : "services",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 24,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 3,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 3,
+      "totalValue" : 24
+    }, {
+      "key" : "utils",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 30,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 3,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "veryHighRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "lowRiskPercentage" : 0.0,
+      "totalCount" : 3,
+      "totalValue" : 30
+    } ] ],
+    "mostComplexUnits" : [ {
+      "shortName" : "export default function ResultCard()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultCard.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 69,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 12,
+        "linesOfCodeInUnits" : 59
+      },
+      "startLine" : 13,
+      "endLine" : 78,
+      "linesOfCode" : 54,
+      "mcCabeIndex" : 10,
+      "numberOfParameters" : 8,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "function handleClick()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/ResultCard.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 69,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 12,
+          "linesOfCodeInUnits" : 59
+        },
+        "startLine" : 24,
+        "endLine" : 28,
+        "linesOfCode" : 5,
+        "mcCabeIndex" : 2,
+        "numberOfParameters" : 0,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "function PaginationResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/PaginationResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 96,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 10,
+        "linesOfCodeInUnits" : 88
+      },
+      "startLine" : 10,
+      "endLine" : 105,
+      "linesOfCode" : 85,
+      "mcCabeIndex" : 9,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "function synchronizeCurrentPageAndInput()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/PaginationResult.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 96,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 10,
+          "linesOfCodeInUnits" : 88
+        },
+        "startLine" : 20,
+        "endLine" : 22,
+        "linesOfCode" : 3,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 0,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "async function run()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultsList.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 86,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 14,
+        "linesOfCodeInUnits" : 78
+      },
+      "startLine" : 29,
+      "endLine" : 74,
+      "linesOfCode" : 39,
+      "mcCabeIndex" : 8,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function CharacterResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/CharacterResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 63,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 53
+      },
+      "startLine" : 13,
+      "endLine" : 72,
+      "linesOfCode" : 53,
+      "mcCabeIndex" : 7,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default function ResultsList()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultsList.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 86,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 14,
+        "linesOfCodeInUnits" : 78
+      },
+      "startLine" : 12,
+      "endLine" : 103,
+      "linesOfCode" : 39,
+      "mcCabeIndex" : 6,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "async function run()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/ResultsList.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 86,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 14,
+          "linesOfCodeInUnits" : 78
+        },
+        "startLine" : 29,
+        "endLine" : 74,
+        "linesOfCode" : 39,
+        "mcCabeIndex" : 8,
+        "numberOfParameters" : 0,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "export function normalizeCharacterName()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "utils/strings.ts",
+        "extension" : "ts",
+        "linesOfCode" : 22,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 4,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 10,
+      "endLine" : 45,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 4,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default function SearchBox()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/SearchBox.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 65,
+        "unitsCount" : 3,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 57
+      },
+      "startLine" : 11,
+      "endLine" : 76,
+      "linesOfCode" : 37,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 5,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "function handleChange()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/SearchBox.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 65,
+          "unitsCount" : 3,
+          "unitsMcCabeIndexSum" : 7,
+          "linesOfCodeInUnits" : 57
+        },
+        "startLine" : 20,
+        "endLine" : 24,
+        "linesOfCode" : 5,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      }, {
+        "shortName" : "function handleSubmit()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "components/SearchBox.tsx",
+          "extension" : "tsx",
+          "linesOfCode" : 65,
+          "unitsCount" : 3,
+          "unitsMcCabeIndexSum" : 7,
+          "linesOfCodeInUnits" : 57
+        },
+        "startLine" : 26,
+        "endLine" : 43,
+        "linesOfCode" : 15,
+        "mcCabeIndex" : 3,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "function handleSubmit()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/SearchBox.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 65,
+        "unitsCount" : 3,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 57
+      },
+      "startLine" : 26,
+      "endLine" : 43,
+      "linesOfCode" : 15,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export function useCharacterSearch()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/CharacterSearch/hooks/useCharacterSearch.ts",
+        "extension" : "ts",
+        "linesOfCode" : 43,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 40
+      },
+      "startLine" : 5,
+      "endLine" : 50,
+      "linesOfCode" : 40,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function startConnection()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "services/realtime/liveCommunication.ts",
+        "extension" : "ts",
+        "linesOfCode" : 24,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 11
+      },
+      "startLine" : 17,
+      "endLine" : 28,
+      "linesOfCode" : 11,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function PromptResultTable()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/PromptCharacters.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 19,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 17
+      },
+      "startLine" : 3,
+      "endLine" : 21,
+      "linesOfCode" : 17,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function handleClick()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/ResultCard.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 69,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 12,
+        "linesOfCodeInUnits" : 59
+      },
+      "startLine" : 24,
+      "endLine" : 28,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function StringArrayResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/StringArrayResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 35,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 26
+      },
+      "startLine" : 13,
+      "endLine" : 39,
+      "linesOfCode" : 26,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "addCharacterToTracking: async()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+        "extension" : "ts",
+        "linesOfCode" : 46,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 4,
+        "linesOfCodeInUnits" : 21
+      },
+      "startLine" : 21,
+      "endLine" : 36,
+      "linesOfCode" : 11,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "removeCharacterFromTracking: async()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/Tracking/store/charactersTrackingStore.ts",
+        "extension" : "ts",
+        "linesOfCode" : 46,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 4,
+        "linesOfCodeInUnits" : 21
+      },
+      "startLine" : 38,
+      "endLine" : 50,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function TibiaLogo1()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/logos/TibiaLogo2.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 11,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 7
+      },
+      "startLine" : 5,
+      "endLine" : 11,
+      "linesOfCode" : 7,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function synchronizeCurrentPageAndInput()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/PaginationResult.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 96,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 10,
+        "linesOfCodeInUnits" : 88
+      },
+      "startLine" : 20,
+      "endLine" : 22,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function ErrorResult()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/RenderError.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 20,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 9,
+      "endLine" : 22,
+      "linesOfCode" : 14,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function handleChange()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "components/SearchBox.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 65,
+        "unitsCount" : 3,
+        "unitsMcCabeIndexSum" : 7,
+        "linesOfCodeInUnits" : 57
+      },
+      "startLine" : 20,
+      "endLine" : 24,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "backgroundColor: getColorByStatus()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "features/Tracking/components/TrackingCharacter/TrackingCharacter.tsx",
+        "extension" : "tsx",
+        "linesOfCode" : 35,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 6
+      },
+      "startLine" : 13,
+      "endLine" : 19,
+      "linesOfCode" : 6,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function fetchCharacter()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "services/characters/characterApi.ts",
+        "extension" : "ts",
+        "linesOfCode" : 19,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 13
+      },
+      "startLine" : 8,
+      "endLine" : 11,
+      "linesOfCode" : 4,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function fetchSimilarCharacters()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "services/characters/characterApi.ts",
+        "extension" : "ts",
+        "linesOfCode" : 19,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 13
+      },
+      "startLine" : 13,
+      "endLine" : 21,
+      "linesOfCode" : 9,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function toPascalCase()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "utils/stringModificator.ts",
+        "extension" : "ts",
+        "linesOfCode" : 6,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 5
+      },
+      "startLine" : 1,
+      "endLine" : 5,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export function buildCharacterUrl()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "utils/url.ts",
+        "extension" : "ts",
+        "linesOfCode" : 13,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 3
+      },
+      "startLine" : 15,
+      "endLine" : 17,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    } ]
+  },
+  "duplicationAnalysisResults" : {
+    "overallDuplication" : {
+      "key" : "system",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 1185,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    },
+    "duplicationPerComponent" : [ [ {
+      "key" : "ROOT",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 79,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "components",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 616,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "constants",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 4,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "contexts",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 4,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "features",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 271,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "pages",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 77,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "schema",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 16,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "services",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 35,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "types",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 31,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    }, {
+      "key" : "utils",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 52,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    } ] ],
+    "duplicationPerConcern" : [ ],
+    "duplicationPerExtension" : [ ],
+    "longestDuplicates" : [ ],
+    "mostFrequentDuplicates" : [ ]
+  },
+  "contributorsAnalysisResults" : {
+    "latestCommitDate" : "",
+    "contributors" : [ ],
+    "contributorsPerYear" : [ ],
+    "contributorsPerMonth" : [ ],
+    "contributorsPerDay" : [ ],
+    "contributorsPerWeek" : [ ],
+    "commitsPerExtensions" : [ ]
+  },
+  "numberOfExcludedFiles" : 6,
+  "excludedExtensions" : {
+    "svg" : 1,
+    "tsx" : 4,
+    "ts" : 1
+  },
+  "analysisStartTimeMs" : 1764827641930,
+  "maxLinesOfCode" : 1339,
+  "maxFileCount" : 51
+}

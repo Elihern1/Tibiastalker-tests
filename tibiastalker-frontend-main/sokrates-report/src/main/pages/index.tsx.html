@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>pages/index.tsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">pages/index.tsx (<b>14</b> lines of code) (<a href="index.tsx">raw</a>):</h3>
+<div id="editor">import { Row } from &quot;react-bootstrap&quot;;
+
+import FooterContainer from &quot;../components/FooterContainer&quot;;
+import MainContainer from &quot;../components/MainContainer&quot;;
+import { PageContainer } from &quot;../components/PageContainer&quot;;
+
+function App() {
+  return (
+    &lt;PageContainer&gt;
+      &lt;Row style={{ flexGrow: 1, alignItems: &quot;center&quot; }}&gt;
+        &lt;MainContainer /&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;FooterContainer /&gt;
+      &lt;/Row&gt;
+    &lt;/PageContainer&gt;
+  );
+}
+
+export default App;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/typescript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

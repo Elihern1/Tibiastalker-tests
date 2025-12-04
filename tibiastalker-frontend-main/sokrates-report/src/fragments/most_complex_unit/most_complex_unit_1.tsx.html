@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>export default function ResultCard()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">export default function ResultCard()</h3>
+<p style="margin-top: 4px">in <i>components/ResultCard.tsx [13:78]</i></p>
+<ul>
+    <li><b>54</b> lines of code</li>
+    <li><b>10</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="tsx">
+export default function ResultCard({
+  name,
+  level,
+  vocation,
+  server,
+  href,
+  highlight = false,
+  onSelect,
+}: ResultCardProps) {
+  
+  // Fonction de clic principale
+  function handleClick() {
+    if (href) {
+      window.location.href = href;
+    }
+  }
+
+  return (
+    &lt;article
+      role={href ? &quot;button&quot; : &quot;article&quot;}
+      aria-label={`Result for ${name}`}
+      className={`result-card ${highlight ? 'is-highlighted' : ''}`}
+      data-testid=&quot;result-card&quot;
+      onClick={href ? handleClick : undefined}
+      style={{ cursor: href ? &quot;pointer&quot; : &quot;default&quot; }}
+    &gt;
+      &lt;header&gt;
+        &lt;h2&gt;{name}&lt;/h2&gt;
+        {href ? (
+          &lt;a href={href} aria-label={`View ${name}`}&gt;
+            View
+          &lt;/a&gt;
+        ) : null}
+      &lt;/header&gt;
+
+      &lt;dl&gt;
+        &lt;div&gt;
+          &lt;dt&gt;Level&lt;/dt&gt;
+          &lt;dd&gt;{level}&lt;/dd&gt;
+        &lt;/div&gt;
+
+        {vocation ? (
+          &lt;div&gt;
+            &lt;dt&gt;Vocation&lt;/dt&gt;
+            &lt;dd&gt;{vocation}&lt;/dd&gt;
+          &lt;/div&gt;
+        ) : null}
+
+        {server ? (
+          &lt;div&gt;
+            &lt;dt&gt;Server&lt;/dt&gt;
+            &lt;dd&gt;{server}&lt;/dd&gt;
+          &lt;/div&gt;
+        ) : null}
+      &lt;/dl&gt;
+
+      {onSelect ? (
+        &lt;footer&gt;
+          &lt;button type=&quot;button&quot; onClick={onSelect} aria-label={`Select ${name}`}&gt;
+            Select
+          &lt;/button&gt;
+        &lt;/footer&gt;
+      ) : null}
+    &lt;/article&gt;
+  );
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
